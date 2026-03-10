@@ -1,0 +1,211 @@
+{
+  "total_questions": 20,
+  "evaluated": 20,
+  "avg_keyword_recall": 0.8167,
+  "answer_rate": 0.9,
+  "source_coverage": 1.0,
+  "avg_latency_ms": 4723.2,
+  "p95_latency_ms": 23914.5,
+  "results": [
+    {
+      "id": "Q01",
+      "category": "income_statement",
+      "question": "What was the total revenue for fiscal year 2023?",
+      "answer_preview": "The total revenue for fiscal year 2023 was $4.82 billion.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 23914.5
+    },
+    {
+      "id": "Q02",
+      "category": "profitability",
+      "question": "What is the net income for the most recent fiscal year?",
+      "answer_preview": "The net income for fiscal year 2023 was $930 million.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 1617.9
+    },
+    {
+      "id": "Q03",
+      "category": "balance_sheet",
+      "question": "How much cash does the company hold on its balance sheet?",
+      "answer_preview": "As of the balance sheet date, Acme Corporation held $2.14 billion in cash and cash equivalents.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 6813.7
+    },
+    {
+      "id": "Q04",
+      "category": "profitability",
+      "question": "What is the net income margin?",
+      "answer_preview": "The net income margin for 2023 was 19.3%.",
+      "keyword_recall": 0.6667,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 9628.9
+    },
+    {
+      "id": "Q05",
+      "category": "workforce",
+      "question": "How many employees does the company have?",
+      "answer_preview": "As of December 2023, Acme Corporation employed 8,742 full-time employees globally.",
+      "keyword_recall": 0.6667,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 1735.9
+    },
+    {
+      "id": "Q06",
+      "category": "cash_flow",
+      "question": "What were the capital expenditures for the year?",
+      "answer_preview": "Capital expenditures for the year were $187 million.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 1829.6
+    },
+    {
+      "id": "Q07",
+      "category": "income_statement",
+      "question": "What was revenue growth year over year?",
+      "answer_preview": "Revenue growth year over year was 11.8%, increasing from $4.31 billion in fiscal year 2022 to $4.82 billion in fiscal year 2023.",
+      "keyword_recall": 0.6667,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 2019.3
+    },
+    {
+      "id": "Q08",
+      "category": "income_statement",
+      "question": "What was total revenue in fiscal year 2022?",
+      "answer_preview": "Total revenue in fiscal year 2022 was $4.31 billion.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 1972.7
+    },
+    {
+      "id": "Q09",
+      "category": "balance_sheet",
+      "question": "What is the cash and cash equivalents figure?",
+      "answer_preview": "Answer: Cash and cash equivalents stood at $2.14 billion.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 2161.0
+    },
+    {
+      "id": "Q10",
+      "category": "profitability",
+      "question": "How much did net income grow compared to last year?",
+      "answer_preview": "I could not find this information in the provided documents.",
+      "keyword_recall": 0.0,
+      "has_answer": false,
+      "source_provided": true,
+      "latency_ms": 1758.1
+    },
+    {
+      "id": "Q11",
+      "category": "income_statement",
+      "question": "What was the company revenue in 2021?",
+      "answer_preview": "I could not find this information in the provided documents.",
+      "keyword_recall": 0.0,
+      "has_answer": false,
+      "source_provided": true,
+      "latency_ms": 15525.1
+    },
+    {
+      "id": "Q12",
+      "category": "workforce",
+      "question": "What is the headcount of the company globally?",
+      "answer_preview": "As of December 2023, the company employed 8,742 full-time employees globally.",
+      "keyword_recall": 0.6667,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 1653.4
+    },
+    {
+      "id": "Q13",
+      "category": "summary",
+      "question": "Describe the company financial performance in 2023.",
+      "answer_preview": "In fiscal year 2023, Acme Corporation reported the following financial performance:\n\n*   **Total Revenue:** $4.82 billion, representing an 11.8% incre",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 2086.7
+    },
+    {
+      "id": "Q14",
+      "category": "profitability",
+      "question": "What was the net income margin percentage?",
+      "answer_preview": "The net income margin for 2023 was 19.3%.",
+      "keyword_recall": 0.6667,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 1667.1
+    },
+    {
+      "id": "Q15",
+      "category": "income_statement",
+      "question": "How did revenue change between 2022 and 2023?",
+      "answer_preview": "Revenue increased by 11.8% between 2022 and 2023, rising from $4.31 billion in fiscal year 2022 to $4.82 billion in fiscal year 2023.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 1957.2
+    },
+    {
+      "id": "Q16",
+      "category": "workforce",
+      "question": "What is the total workforce size?",
+      "answer_preview": "As of December 2023, Acme Corporation employed 8,742 full-time employees globally.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 1652.8
+    },
+    {
+      "id": "Q17",
+      "category": "cash_flow",
+      "question": "What were operating expenses or capital expenditures?",
+      "answer_preview": "Capital expenditures for fiscal year 2023 were $187 million. The provided documents do not contain information regarding operating expenses.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 1796.5
+    },
+    {
+      "id": "Q18",
+      "category": "balance_sheet",
+      "question": "What is the company cash position?",
+      "answer_preview": "As of the balance sheet date, Acme Corporation's cash and cash equivalents stood at $2.14 billion.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 10959.9
+    },
+    {
+      "id": "Q19",
+      "category": "summary",
+      "question": "Summarise the income statement for 2023.",
+      "answer_preview": "For fiscal year 2023, Acme Corporation reported total revenue of $4.82 billion, representing an 11.8% increase over the previous year. The company ach",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 2046.9
+    },
+    {
+      "id": "Q20",
+      "category": "profitability",
+      "question": "What was net income in 2023?",
+      "answer_preview": "The net income for 2023 was $930 million.",
+      "keyword_recall": 1.0,
+      "has_answer": true,
+      "source_provided": true,
+      "latency_ms": 1667.7
+    }
+  ]
+}

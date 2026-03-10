@@ -1,0 +1,122 @@
+[
+  {
+    "id": "Q01",
+    "question": "What was the total revenue for fiscal year 2023?",
+    "expected_keywords": ["revenue", "2023", "billion"],
+    "category": "income_statement"
+  },
+  {
+    "id": "Q02",
+    "question": "What is the net income for the most recent fiscal year?",
+    "expected_keywords": ["net income", "million", "930"],
+    "category": "profitability"
+  },
+  {
+    "id": "Q03",
+    "question": "How much cash does the company hold on its balance sheet?",
+    "expected_keywords": ["cash", "billion", "balance sheet"],
+    "category": "balance_sheet"
+  },
+  {
+    "id": "Q04",
+    "question": "What is the net income margin?",
+    "expected_keywords": ["margin", "19", "percent"],
+    "category": "profitability"
+  },
+  {
+    "id": "Q05",
+    "question": "How many employees does the company have?",
+    "expected_keywords": ["employees", "8742", "full-time"],
+    "category": "workforce"
+  },
+  {
+    "id": "Q06",
+    "question": "What were the capital expenditures for the year?",
+    "expected_keywords": ["capital", "expenditures", "187"],
+    "category": "cash_flow"
+  },
+  {
+    "id": "Q07",
+    "question": "What was revenue growth year over year?",
+    "expected_keywords": ["11.8", "growth", "increase"],
+    "category": "income_statement"
+  },
+  {
+    "id": "Q08",
+    "question": "What was total revenue in fiscal year 2022?",
+    "expected_keywords": ["2022", "4.31", "billion"],
+    "category": "income_statement"
+  },
+  {
+    "id": "Q09",
+    "question": "What is the cash and cash equivalents figure?",
+    "expected_keywords": ["cash", "2.14", "billion"],
+    "category": "balance_sheet"
+  },
+  {
+    "id": "Q10",
+    "question": "How much did net income grow compared to last year?",
+    "expected_keywords": ["net income", "930", "million"],
+    "category": "profitability"
+  },
+  {
+    "id": "Q11",
+    "question": "What was the company revenue in 2021?",
+    "expected_keywords": ["2021", "revenue", "billion"],
+    "category": "income_statement"
+  },
+  {
+    "id": "Q12",
+    "question": "What is the headcount of the company globally?",
+    "expected_keywords": ["employees", "globally", "8742"],
+    "category": "workforce"
+  },
+  {
+    "id": "Q13",
+    "question": "Describe the company financial performance in 2023.",
+    "expected_keywords": ["revenue", "billion", "2023"],
+    "category": "summary"
+  },
+  {
+    "id": "Q14",
+    "question": "What was the net income margin percentage?",
+    "expected_keywords": ["19.3", "margin", "percent"],
+    "category": "profitability"
+  },
+  {
+    "id": "Q15",
+    "question": "How did revenue change between 2022 and 2023?",
+    "expected_keywords": ["4.82", "4.31", "increase"],
+    "category": "income_statement"
+  },
+  {
+    "id": "Q16",
+    "question": "What is the total workforce size?",
+    "expected_keywords": ["8,742", "employees", "full-time"],
+    "category": "workforce"
+  },
+  {
+    "id": "Q17",
+    "question": "What were operating expenses or capital expenditures?",
+    "expected_keywords": ["capital", "187", "million"],
+    "category": "cash_flow"
+  },
+  {
+    "id": "Q18",
+    "question": "What is the company cash position?",
+    "expected_keywords": ["cash", "2.14", "billion"],
+    "category": "balance_sheet"
+  },
+  {
+    "id": "Q19",
+    "question": "Summarise the income statement for 2023.",
+    "expected_keywords": ["revenue", "net income", "2023"],
+    "category": "summary"
+  },
+  {
+    "id": "Q20",
+    "question": "What was net income in 2023?",
+    "expected_keywords": ["930", "million", "net income"],
+    "category": "profitability"
+  }
+]
