@@ -13,6 +13,9 @@ import argparse
 from pathlib import Path
 
 import httpx
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
 REFUSAL_PHRASES = [
@@ -42,7 +45,13 @@ def run_eval(api_url: str, dataset_path: str, output_path: str):
     with open(dataset_path) as f:
         questions = json.load(f)
 
-    client = httpx.Client(base_url=api_url, timeout=60.0)
+    api_key = os.getenv("API_KEY", "")
+
+    client = httpx.Client(
+        base_url=api_url,
+        timeout=60.0,
+        headers={"X-API-Key": api_key},
+    )
     results = []
 
     # Score trackers

@@ -39,6 +39,12 @@ class Settings(BaseSettings):
     api_key: str = ""                    # Empty = auth disabled (dev mode)
     rate_limit_per_minute: int = 30      # Max requests per minute per IP
 
+    # Vector store
+    vector_store: str = "qdrant"           # "qdrant" or "faiss"
+    qdrant_host: str = "localhost"
+    qdrant_port: int = 6333
+    qdrant_collection: str = "financial_docs"
+
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"

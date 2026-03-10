@@ -135,26 +135,50 @@ class RetrievalChain:
         return response.content
 
     def _load(self):
-        if not self._index_path.exists():
-            logger.info("no_index_found", path=str(self._index_path))
-            return
+        settings = self.settings
 
-        logger.info("reranker_loading", model=self.settings.reranker_model)
-        self._reranker = CrossEncoder(self.settings.reranker_model)
+        logger.info("reranker_loading", model=settings.reranker_model)
+        self._reranker = CrossEncoder(settings.reranker_model)
         logger.info("reranker_ready")
 
-        embeddings = GoogleGenerativeAIEmbeddings(
-            model=self.settings.embedding_model,
-            google_api_key=self.settings.google_api_key,
-        )
+        from app.core.vector_store import get_embeddings, get_vector_store
 
-        self._store = FAISS.load_local(
-            str(self._index_path),
-            embeddings,
-            allow_dangerous_deserialization=True,
-        )
-        logger.info("faiss_loaded", total_chunks=self._store.index.ntotal)
+        embeddings = get_embeddings()
+        self._store = get_vector_store(embeddings)
 
-        self._all_chunks = list(self._store.docstore._dict.values())
+        if self._store is None:
+            logger.info("no_index_found")
+            return
+
+        # Get all chunks for BM25
+        if settings.vector_store == "qdrant":
+            # Scroll all vectors from Qdrant for BM25
+            from qdrant_client import QdrantClient
+            from langchain_core.documents import Document
+
+            client = QdrantClient(
+                host=settings.qdrant_host,
+                port=settings.qdrant_port,
+            )
+            results, _ = client.scroll(
+                collection_name=settings.qdrant_collection,
+                limit=10000,
+                with_payload=True,
+                with_vectors=False,
+            )
+            self._all_chunks = [
+                Document(
+                    page_content=r.payload.get("page_content", ""),
+                    metadata=r.payload.get("metadata", {}),
+                )
+                for r in results
+            ]
+        else:
+            self._all_chunks = list(self._store.docstore._dict.values())
+
         logger.info("bm25_ready", chunks=len(self._all_chunks))
-        logger.info("retrieval_pipeline_ready", mode="hybrid+reranker")
+        logger.info(
+            "retrieval_pipeline_ready",
+            mode="hybrid+reranker",
+            vector_store=settings.vector_store,
+        )

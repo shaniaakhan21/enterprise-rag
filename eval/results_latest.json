@@ -1,11 +1,11 @@
 {
   "total_questions": 20,
   "evaluated": 20,
-  "avg_keyword_recall": 0.9,
-  "answer_rate": 0.95,
+  "avg_keyword_recall": 0.85,
+  "answer_rate": 0.9,
   "source_coverage": 1.0,
-  "avg_latency_ms": 3168.1,
-  "p95_latency_ms": 27144.9,
+  "avg_latency_ms": 4332.0,
+  "p95_latency_ms": 19334.6,
   "results": [
     {
       "id": "Q01",
@@ -15,7 +15,7 @@
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 4148.4
+      "latency_ms": 19334.6
     },
     {
       "id": "Q02",
@@ -25,27 +25,27 @@
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1784.1
+      "latency_ms": 2165.4
     },
     {
       "id": "Q03",
       "category": "balance_sheet",
       "question": "How much cash does the company hold on its balance sheet?",
-      "answer_preview": "According to the \"BALANCE SHEET\" section provided in the FY2021 financial highlights, the company holds $2.14 billion in Cash and Cash Equivalents.",
+      "answer_preview": "Answer: As of the balance sheet provided, the company holds $2.14 billion in cash and cash equivalents.",
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1872.5
+      "latency_ms": 2498.9
     },
     {
       "id": "Q04",
       "category": "profitability",
       "question": "What is the net income margin?",
-      "answer_preview": "The net income margin for fiscal year 2023 was 19.3%, compared to 18.3% in fiscal year 2022.",
+      "answer_preview": "The net income margin for the provided fiscal years is as follows:\n\n*   **FY2023:** 19.3%\n*   **FY2022:** 18.3%\n*   **FY2021:** 18.0%",
       "keyword_recall": 0.6667,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1671.0
+      "latency_ms": 2122.9
     },
     {
       "id": "Q05",
@@ -55,7 +55,7 @@
       "keyword_recall": 0.6667,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1615.7
+      "latency_ms": 2248.3
     },
     {
       "id": "Q06",
@@ -65,17 +65,17 @@
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1529.4
+      "latency_ms": 1910.4
     },
     {
       "id": "Q07",
       "category": "income_statement",
       "question": "What was revenue growth year over year?",
-      "answer_preview": "Revenue grew 11.8% year-over-year, increasing from $4.31 billion in fiscal year 2022 to $4.82 billion in fiscal year 2023 (Management Discussion and A",
+      "answer_preview": "Total revenue grew 11.8% year-over-year for fiscal year 2023, increasing from $4.31 billion in 2022 to $4.82 billion in 2023.",
       "keyword_recall": 0.3333,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 2177.3
+      "latency_ms": 2194.4
     },
     {
       "id": "Q08",
@@ -85,37 +85,37 @@
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 27144.9
+      "latency_ms": 2396.1
     },
     {
       "id": "Q09",
       "category": "balance_sheet",
       "question": "What is the cash and cash equivalents figure?",
-      "answer_preview": "The cash and cash equivalents figure is $2.14 billion, as stated in the \"Balance Sheet\" and the provided context.",
+      "answer_preview": "The cash and cash equivalents figure is $2.14 billion.",
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1880.1
+      "latency_ms": 2027.2
     },
     {
       "id": "Q10",
       "category": "profitability",
       "question": "How much did net income grow compared to last year?",
-      "answer_preview": "Net income grew by 17.7% in 2023 compared to the previous year, reaching $930 million (Management Discussion and Analysis).",
+      "answer_preview": "Net income grew 17.7% in fiscal year 2023 to $930 million, compared to $790.17 million in fiscal year 2022 (calculated based on the $930 million 2023 ",
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1584.6
+      "latency_ms": 2881.1
     },
     {
       "id": "Q11",
       "category": "income_statement",
       "question": "What was the company revenue in 2021?",
-      "answer_preview": "The company's total revenue in 2021 was $3.95 billion, as stated in the \"FINANCIAL HIGHLIGHTS FY2021\" section.",
-      "keyword_recall": 1.0,
-      "has_answer": true,
+      "answer_preview": "I could not find this information in the provided documents.",
+      "keyword_recall": 0.0,
+      "has_answer": false,
       "source_provided": true,
-      "latency_ms": 1537.2
+      "latency_ms": 2301.0
     },
     {
       "id": "Q12",
@@ -125,37 +125,37 @@
       "keyword_recall": 0.6667,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 2202.1
+      "latency_ms": 1930.8
     },
     {
       "id": "Q13",
       "category": "summary",
       "question": "Describe the company financial performance in 2023.",
-      "answer_preview": "In fiscal year 2023, Acme Corporation demonstrated strong financial performance characterized by the following:\n\n*   **Revenue:** Total revenue grew 1",
+      "answer_preview": "In fiscal year 2023, the company demonstrated strong financial performance characterized by the following:\n\n*   **Revenue:** Total revenue grew 11.8% ",
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 2360.8
+      "latency_ms": 2748.6
     },
     {
       "id": "Q14",
       "category": "profitability",
       "question": "What was the net income margin percentage?",
-      "answer_preview": "The net income margin for fiscal year 2023 was 19.3%. For fiscal year 2021, the net income margin was 18.0%.",
-      "keyword_recall": 0.6667,
+      "answer_preview": "The net income margin percentages are as follows:\n\n*   **FY2023:** 19.3%\n*   **FY2022:** 18.3%\n*   **FY2021:** 18.0%",
+      "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1459.3
+      "latency_ms": 2060.2
     },
     {
       "id": "Q15",
       "category": "income_statement",
       "question": "How did revenue change between 2022 and 2023?",
-      "answer_preview": "Total revenue increased by 11.8% between fiscal year 2022 and 2023, growing from $4.31 billion to $4.82 billion.",
-      "keyword_recall": 1.0,
+      "answer_preview": "Total revenue grew 11.8% year-over-year, increasing from $4.31 billion in fiscal year 2022 to $4.82 billion in fiscal year 2023.",
+      "keyword_recall": 0.6667,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1890.3
+      "latency_ms": 2552.9
     },
     {
       "id": "Q16",
@@ -165,47 +165,47 @@
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1473.1
+      "latency_ms": 2165.7
     },
     {
       "id": "Q17",
       "category": "cash_flow",
       "question": "What were operating expenses or capital expenditures?",
-      "answer_preview": "Based on the provided documents:\n\n*   **Capital Expenditures:** $187 million for fiscal year 2023.\n*   **Operating Expenses:** I could not find this i",
+      "answer_preview": "Capital expenditures for fiscal year 2023 were $187 million. I could not find information regarding operating expenses in the provided documents.",
       "keyword_recall": 1.0,
       "has_answer": false,
       "source_provided": true,
-      "latency_ms": 1476.4
+      "latency_ms": 2187.1
     },
     {
       "id": "Q18",
       "category": "balance_sheet",
       "question": "What is the company cash position?",
-      "answer_preview": "The company's cash and cash equivalents stand at $2.14 billion.",
+      "answer_preview": "As of the end of fiscal year 2023, the company's cash and cash equivalents stood at $2.14 billion.",
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1467.8
+      "latency_ms": 2248.8
     },
     {
       "id": "Q19",
       "category": "summary",
       "question": "Summarise the income statement for 2023.",
-      "answer_preview": "For fiscal year 2023, Acme Corporation reported the following income statement highlights:\n\n*   **Total Revenue:** $4.82 billion (an 11.8% increase fr",
+      "answer_preview": "For fiscal year 2023, Acme Corporation reported the following financial results:\n\n*   **Total Revenue:** $4.82 billion, an 11.8% increase year-over-ye",
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 1920.8
+      "latency_ms": 15637.4
     },
     {
       "id": "Q20",
       "category": "profitability",
       "question": "What was net income in 2023?",
-      "answer_preview": "Net income for 2023 was $930 million, as stated in the \"Financial Highlights FY2023\" and \"Management Discussion and Analysis\" sections.",
+      "answer_preview": "Net income for 2023 was $930 million, representing a 17.7% increase (as stated in the Management Discussion and Analysis section).",
       "keyword_recall": 1.0,
       "has_answer": true,
       "source_provided": true,
-      "latency_ms": 2167.0
+      "latency_ms": 13027.7
     }
   ]
 }

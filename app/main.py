@@ -23,6 +23,8 @@ from app.models.schemas import (
     QueryRequest, QueryResponse, SourceDocument,
     HealthResponse,
 )
+import uuid
+from fastapi.background import BackgroundTasks
 
 settings = get_settings()
 setup_logging(settings.log_level)
@@ -58,7 +60,9 @@ async def lifespan(app: FastAPI):
 
     logger.info("shutdown")
 
-
+# In-memory job tracker for async ingestion
+# In production this would be Redis
+ingestion_jobs: dict = {}
 # ── Single app instance ───────────────────────────────────────────
 app = FastAPI(
     title="Enterprise RAG — Financial Document Q&A",
@@ -156,3 +160,64 @@ async def query_documents(request: Request, body: QueryRequest):
     except Exception as e:
         logger.error("query_failed", error=str(e))
         raise HTTPException(status_code=500, detail=f"Query failed: {e}")
+
+@app.post(
+    "/ingest/async",
+    status_code=202,
+    dependencies=[Depends(verify_api_key)],
+)
+@limiter.limit(f"{settings.rate_limit_per_minute}/minute")
+async def ingest_async(
+    request: Request,
+    body: IngestRequest,
+    background_tasks: BackgroundTasks,
+):
+    """
+    Async ingestion — returns immediately with a job ID.
+    Indexing runs in the background.
+    Poll GET /ingest/status/{job_id} for completion.
+    """
+    job_id = str(uuid.uuid4())
+    ingestion_jobs[job_id] = {"status": "processing", "source": body.source}
+    logger.info("ingest_async_queued", job_id=job_id, source=body.source)
+
+    def run_ingestion():
+        try:
+            safe_path = validate_source_path(body.source)
+            chunks = ingestion_pipeline.ingest(
+                source=str(safe_path),
+                extra_metadata=body.metadata,
+            )
+            retrieval_chain.reload()
+            ingestion_jobs[job_id] = {
+                "status": "complete",
+                "source": body.source,
+                "chunks_indexed": chunks,
+            }
+            logger.info("ingest_async_complete", job_id=job_id, chunks=chunks)
+        except Exception as e:
+            ingestion_jobs[job_id] = {
+                "status": "failed",
+                "source": body.source,
+                "error": str(e),
+            }
+            logger.error("ingest_async_failed", job_id=job_id, error=str(e))
+
+    background_tasks.add_task(run_ingestion)
+
+    return {
+        "job_id": job_id,
+        "status": "processing",
+        "message": "Ingestion started. Poll /ingest/status/{job_id} for updates.",
+    }
+
+
+@app.get(
+    "/ingest/status/{job_id}",
+    dependencies=[Depends(verify_api_key)],
+)
+async def ingest_status(job_id: str):
+    """Check status of an async ingestion job."""
+    if job_id not in ingestion_jobs:
+        raise HTTPException(status_code=404, detail=f"Job {job_id} not found.")
+    return ingestion_jobs[job_id]
