@@ -1,9 +1,9 @@
 import os
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
-from fastapi import FastAPI, HTTPException, Request, Depends, status
-from fastapi.responses import JSONResponse
-from slowapi import _rate_limit_exceeded_handler
+
+from fastapi import FastAPI, HTTPException, Request, Depends
+from fastapi.exceptions import RequestValidationError
 from slowapi.errors import RateLimitExceeded
 
 from app.core.config import get_settings
@@ -12,6 +12,12 @@ from app.core.ingestion import IngestionPipeline
 from app.core.retrieval import RetrievalChain
 from app.core.security import verify_api_key, validate_source_path
 from app.core.ratelimit import limiter, rate_limit_exceeded_handler
+from app.core.errors import (
+    RAGException,
+    rag_exception_handler,
+    validation_exception_handler,
+    unhandled_exception_handler,
+)
 from app.models.schemas import (
     IngestRequest, IngestResponse,
     QueryRequest, QueryResponse, SourceDocument,
@@ -53,6 +59,7 @@ async def lifespan(app: FastAPI):
     logger.info("shutdown")
 
 
+# ── Single app instance ───────────────────────────────────────────
 app = FastAPI(
     title="Enterprise RAG — Financial Document Q&A",
     version=settings.app_version,
@@ -60,16 +67,20 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# Attach rate limiter to app
+# Rate limiter
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, rate_limit_exceeded_handler)
+
+# Error handlers
+app.add_exception_handler(RAGException, rag_exception_handler)
+app.add_exception_handler(RequestValidationError, validation_exception_handler)
+app.add_exception_handler(Exception, unhandled_exception_handler)
 
 
 # ── /health ───────────────────────────────────────────────────────
 
 @app.get("/health", response_model=HealthResponse)
 async def health_check():
-    """Public endpoint — no auth required."""
     return HealthResponse(
         status="ok",
         version=settings.app_version,
@@ -84,13 +95,11 @@ async def health_check():
     "/ingest",
     response_model=IngestResponse,
     status_code=201,
-    dependencies=[Depends(verify_api_key)],   # ← auth required
+    dependencies=[Depends(verify_api_key)],
 )
 @limiter.limit(f"{settings.rate_limit_per_minute}/minute")
 async def ingest_document(request: Request, body: IngestRequest):
     logger.info("ingest_request", source=body.source)
-
-    # Path traversal protection
     safe_path = validate_source_path(body.source)
 
     try:
@@ -100,7 +109,6 @@ async def ingest_document(request: Request, body: IngestRequest):
         )
         retrieval_chain.reload()
         logger.info("ingest_success", source=body.source, chunks=chunks)
-
         return IngestResponse(
             status="success",
             source=body.source,
@@ -123,7 +131,7 @@ async def ingest_document(request: Request, body: IngestRequest):
 @app.post(
     "/query",
     response_model=QueryResponse,
-    dependencies=[Depends(verify_api_key)],   # ← auth required
+    dependencies=[Depends(verify_api_key)],
 )
 @limiter.limit(f"{settings.rate_limit_per_minute}/minute")
 async def query_documents(request: Request, body: QueryRequest):

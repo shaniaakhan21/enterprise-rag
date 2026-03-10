@@ -13,7 +13,7 @@ from sentence_transformers import CrossEncoder
 
 from app.core.config import get_settings
 from app.core.logging import logger
-
+from app.core.retry import with_retry
 
 FINANCE_PROMPT = """You are a senior financial analyst assistant.
 Use ONLY the context excerpts below to answer the question.
@@ -118,7 +118,9 @@ class RetrievalChain:
         )
         return top_docs
 
+    @with_retry(max_attempts=3, min_wait=2.0, max_wait=10.0)
     def _generate(self, question: str, docs: list[Document]) -> str:
+        """Send reranked chunks to Gemini and get answer. Retries on timeout."""
         context = "\n\n---\n\n".join([doc.page_content for doc in docs])
 
         llm = ChatGoogleGenerativeAI(
