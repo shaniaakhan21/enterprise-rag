@@ -18,6 +18,8 @@ class Settings(BaseSettings):
 
     # Retrieval
     retrieval_top_k: int = 5
+    reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    reranker_top_k: int = 3
 
     # Paths
     faiss_index_path: str = "data/processed/faiss_index"
