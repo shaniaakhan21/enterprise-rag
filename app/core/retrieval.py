@@ -6,12 +6,13 @@ from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmb
 from langchain_community.vectorstores import FAISS
 from langchain_community.retrievers import BM25Retriever
 from langchain.retrievers import EnsembleRetriever
-from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain_core.documents import Document
+from langchain_core.messages import HumanMessage
 from sentence_transformers import CrossEncoder
 
 from app.core.config import get_settings
+from app.core.logging import logger
 
 
 FINANCE_PROMPT = """You are a senior financial analyst assistant.
@@ -53,19 +54,12 @@ class RetrievalChain:
         k = top_k or self.settings.retrieval_top_k
         t0 = time.perf_counter()
 
-        # Step 1 — hybrid retrieval: get broader candidate set
-        # We fetch more than we need so reranker has good candidates to work with
         candidate_docs = self._get_candidates(question, k=k * 3)
-
-        # Step 2 — rerank: score each candidate against the question precisely
         reranked_docs = self._rerank(question, candidate_docs)
-
-        # Step 3 — generate: send reranked chunks to Gemini
         answer = self._generate(question, reranked_docs)
 
         latency_ms = round((time.perf_counter() - t0) * 1000, 2)
 
-        # Build sources from reranked docs
         scored_docs = self._store.similarity_search_with_relevance_scores(
             question, k=k
         )
@@ -78,6 +72,15 @@ class RetrievalChain:
             for doc, score in scored_docs
         ]
 
+        logger.info(
+            "query_complete",
+            latency_ms=latency_ms,
+            sources=len(sources),
+            answer_len=len(answer),
+            candidates=len(candidate_docs),
+            reranked=len(reranked_docs),
+        )
+
         return {
             "answer": answer,
             "sources": sources,
@@ -85,7 +88,6 @@ class RetrievalChain:
         }
 
     def _get_candidates(self, question: str, k: int) -> list[Document]:
-        """Hybrid retrieval — returns broader candidate pool for reranking."""
         faiss_retriever = self._store.as_retriever(
             search_type="mmr",
             search_kwargs={"k": k, "fetch_k": k * 3},
@@ -100,34 +102,24 @@ class RetrievalChain:
         return ensemble.invoke(question)
 
     def _rerank(self, question: str, docs: list[Document]) -> list[Document]:
-        """
-        Cross-encoder reranker — scores each chunk against the question.
-        Returns top reranker_top_k most relevant chunks.
-        """
         if not docs:
             return docs
 
-        # Build (question, chunk_text) pairs for the cross-encoder
         pairs = [[question, doc.page_content] for doc in docs]
-
-        # Score all pairs — cross-encoder reads both together
         scores = self._reranker.predict(pairs)
 
-        # Sort by score descending, keep top_k
         scored = sorted(zip(scores, docs), key=lambda x: x[0], reverse=True)
         top_docs = [doc for _, doc in scored[:self.settings.reranker_top_k]]
 
-        print(f"[reranker] {len(docs)} candidates → top {len(top_docs)} after reranking")
+        logger.info(
+            "reranker_complete",
+            candidates=len(docs),
+            selected=len(top_docs),
+        )
         return top_docs
 
     def _generate(self, question: str, docs: list[Document]) -> str:
-        """Send reranked chunks to Gemini and get answer."""
-        # Build context from reranked chunks
         context = "\n\n---\n\n".join([doc.page_content for doc in docs])
-
-        # Build the prompt manually since we're bypassing the chain
-        from langchain_google_genai import ChatGoogleGenerativeAI
-        from langchain_core.messages import HumanMessage
 
         llm = ChatGoogleGenerativeAI(
             model=self.settings.llm_model,
@@ -142,13 +134,12 @@ class RetrievalChain:
 
     def _load(self):
         if not self._index_path.exists():
-            print("[retrieval] No index found yet. Ingest documents first.")
+            logger.info("no_index_found", path=str(self._index_path))
             return
 
-        # Load reranker model (runs locally, no API needed)
-        print(f"[retrieval] Loading reranker: {self.settings.reranker_model}")
+        logger.info("reranker_loading", model=self.settings.reranker_model)
         self._reranker = CrossEncoder(self.settings.reranker_model)
-        print("[retrieval] Reranker loaded.")
+        logger.info("reranker_ready")
 
         embeddings = GoogleGenerativeAIEmbeddings(
             model=self.settings.embedding_model,
@@ -160,8 +151,8 @@ class RetrievalChain:
             embeddings,
             allow_dangerous_deserialization=True,
         )
-        print(f"[retrieval] FAISS index loaded — {self._store.index.ntotal} chunks")
+        logger.info("faiss_loaded", total_chunks=self._store.index.ntotal)
 
         self._all_chunks = list(self._store.docstore._dict.values())
-        print(f"[retrieval] BM25 ready over {len(self._all_chunks)} chunks")
-        print("[retrieval] Pipeline: Hybrid retrieval → Reranker → Gemini")
+        logger.info("bm25_ready", chunks=len(self._all_chunks))
+        logger.info("retrieval_pipeline_ready", mode="hybrid+reranker")

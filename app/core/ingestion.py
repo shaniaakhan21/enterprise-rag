@@ -10,6 +10,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
 
 from app.core.config import get_settings
+from app.core.logging import logger          # ← import logger
 
 
 class IngestionPipeline:
@@ -18,41 +19,35 @@ class IngestionPipeline:
 
     def __init__(self):
         self.settings = get_settings()
-
-        # This is what converts text → vectors
         self.embeddings = GoogleGenerativeAIEmbeddings(
             model=self.settings.embedding_model,
             google_api_key=self.settings.google_api_key,
         )
-
-        # This is what splits documents into chunks
         self.splitter = RecursiveCharacterTextSplitter(
             chunk_size=self.settings.chunk_size,
             chunk_overlap=self.settings.chunk_overlap,
             separators=["\n\n", "\n", ". ", " ", ""],
         )
-
         self._index_path = Path(self.settings.faiss_index_path)
 
     def ingest(self, source: str, extra_metadata: Optional[dict] = None) -> int:
-        """
-        Full pipeline: load → split → embed → store.
-        Returns number of chunks indexed.
-        """
         path = Path(source)
         self._validate(path)
 
-        print(f"[ingest] Loading: {path.name}")
+        t0 = time.perf_counter()
+        logger.info("ingest_start", source=str(path))
+
         raw_docs = self._load(path)
-
-        print(f"[ingest] Splitting into chunks...")
         chunks = self._split(raw_docs, path, extra_metadata or {})
-        print(f"[ingest] Created {len(chunks)} chunks")
-
-        print(f"[ingest] Embedding and storing in FAISS...")
         self._store(chunks)
 
-        print(f"[ingest] Done. {len(chunks)} chunks indexed.")
+        latency_ms = round((time.perf_counter() - t0) * 1000, 2)
+        logger.info(
+            "ingest_complete",
+            source=path.name,
+            chunks=len(chunks),
+            latency_ms=latency_ms,
+        )
         return len(chunks)
 
     def _validate(self, path: Path):
@@ -66,12 +61,12 @@ class IngestionPipeline:
             loader = PyPDFLoader(str(path))
         else:
             loader = TextLoader(str(path), encoding="utf-8")
-        return loader.load()
+        docs = loader.load()
+        logger.info("document_loaded", source=path.name, pages=len(docs))
+        return docs
 
     def _split(self, docs: list[Document], path: Path, extra_metadata: dict) -> list[Document]:
         chunks = self.splitter.split_documents(docs)
-
-        # Attach metadata to every chunk so we know where it came from
         for i, chunk in enumerate(chunks):
             chunk.metadata.update({
                 "source_file": path.name,
@@ -79,14 +74,13 @@ class IngestionPipeline:
                 "total_chunks": len(chunks),
                 **extra_metadata,
             })
+        logger.info("chunks_created", count=len(chunks), source=path.name)
         return chunks
 
     def _store(self, chunks: list[Document]):
         self._index_path.parent.mkdir(parents=True, exist_ok=True)
-
         if self._index_path.exists():
-            # Index already exists → merge new chunks in
-            print("[ingest] Existing index found, merging...")
+            logger.info("index_merging", new_chunks=len(chunks))
             store = FAISS.load_local(
                 str(self._index_path),
                 self.embeddings,
@@ -94,9 +88,8 @@ class IngestionPipeline:
             )
             store.add_documents(chunks)
         else:
-            # First time → create fresh index
-            print("[ingest] Creating new index...")
+            logger.info("index_creating", chunks=len(chunks))
             store = FAISS.from_documents(chunks, self.embeddings)
 
         store.save_local(str(self._index_path))
-        print(f"[ingest] Index saved to {self._index_path}")
+        logger.info("index_saved", path=str(self._index_path))
