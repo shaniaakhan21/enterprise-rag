@@ -35,6 +35,10 @@ class Settings(BaseSettings):
     langchain_api_key: str = ""
     langchain_project: str = "enterprise-rag"
 
+    # Security
+    api_key: str = ""                    # Empty = auth disabled (dev mode)
+    rate_limit_per_minute: int = 30      # Max requests per minute per IP
+
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"

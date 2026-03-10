@@ -1,19 +1,22 @@
+import os
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
-
-from fastapi import FastAPI, HTTPException, status
+from fastapi import FastAPI, HTTPException, Request, Depends, status
+from fastapi.responses import JSONResponse
+from slowapi import _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
 
 from app.core.config import get_settings
 from app.core.logging import logger, setup_logging
 from app.core.ingestion import IngestionPipeline
 from app.core.retrieval import RetrievalChain
+from app.core.security import verify_api_key, validate_source_path
+from app.core.ratelimit import limiter, rate_limit_exceeded_handler
 from app.models.schemas import (
     IngestRequest, IngestResponse,
     QueryRequest, QueryResponse, SourceDocument,
     HealthResponse,
 )
-
-import os
 
 settings = get_settings()
 setup_logging(settings.log_level)
@@ -26,8 +29,6 @@ retrieval_chain = None
 async def lifespan(app: FastAPI):
     global ingestion_pipeline, retrieval_chain
 
-    # Set LangSmith env vars so LangChain picks them up automatically
-    # LangChain reads these from environment, not from our settings object
     os.environ["LANGCHAIN_TRACING_V2"] = settings.langchain_tracing_v2
     os.environ["LANGCHAIN_ENDPOINT"] = settings.langchain_endpoint
     os.environ["LANGCHAIN_PROJECT"] = settings.langchain_project
@@ -39,7 +40,8 @@ async def lifespan(app: FastAPI):
         "startup",
         version=settings.app_version,
         langsmith_tracing=tracing_enabled,
-        langsmith_project=settings.langchain_project if tracing_enabled else None,
+        auth_enabled=bool(settings.api_key),
+        rate_limit=settings.rate_limit_per_minute,
     )
 
     ingestion_pipeline = IngestionPipeline()
@@ -58,9 +60,16 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Attach rate limiter to app
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, rate_limit_exceeded_handler)
+
+
+# ── /health ───────────────────────────────────────────────────────
 
 @app.get("/health", response_model=HealthResponse)
 async def health_check():
+    """Public endpoint — no auth required."""
     return HealthResponse(
         status="ok",
         version=settings.app_version,
@@ -69,37 +78,56 @@ async def health_check():
     )
 
 
-@app.post("/ingest", response_model=IngestResponse, status_code=201)
-async def ingest_document(request: IngestRequest):
-    logger.info("ingest_request", source=request.source)
+# ── /ingest ───────────────────────────────────────────────────────
+
+@app.post(
+    "/ingest",
+    response_model=IngestResponse,
+    status_code=201,
+    dependencies=[Depends(verify_api_key)],   # ← auth required
+)
+@limiter.limit(f"{settings.rate_limit_per_minute}/minute")
+async def ingest_document(request: Request, body: IngestRequest):
+    logger.info("ingest_request", source=body.source)
+
+    # Path traversal protection
+    safe_path = validate_source_path(body.source)
+
     try:
         chunks = ingestion_pipeline.ingest(
-            source=request.source,
-            extra_metadata=request.metadata,
+            source=str(safe_path),
+            extra_metadata=body.metadata,
         )
         retrieval_chain.reload()
-        logger.info("ingest_success", source=request.source, chunks=chunks)
+        logger.info("ingest_success", source=body.source, chunks=chunks)
 
         return IngestResponse(
             status="success",
-            source=request.source,
+            source=body.source,
             chunks_indexed=chunks,
             message=f"Indexed {chunks} chunks. Ready for queries.",
         )
     except FileNotFoundError as e:
-        logger.error("ingest_file_not_found", source=request.source, error=str(e))
+        logger.error("ingest_file_not_found", source=body.source, error=str(e))
         raise HTTPException(status_code=404, detail=str(e))
     except ValueError as e:
-        logger.error("ingest_invalid_file", source=request.source, error=str(e))
+        logger.error("ingest_invalid_file", source=body.source, error=str(e))
         raise HTTPException(status_code=422, detail=str(e))
     except Exception as e:
-        logger.error("ingest_failed", source=request.source, error=str(e))
+        logger.error("ingest_failed", source=body.source, error=str(e))
         raise HTTPException(status_code=500, detail=f"Ingestion failed: {e}")
 
 
-@app.post("/query", response_model=QueryResponse)
-async def query_documents(request: QueryRequest):
-    logger.info("query_request", question_len=len(request.question))
+# ── /query ────────────────────────────────────────────────────────
+
+@app.post(
+    "/query",
+    response_model=QueryResponse,
+    dependencies=[Depends(verify_api_key)],   # ← auth required
+)
+@limiter.limit(f"{settings.rate_limit_per_minute}/minute")
+async def query_documents(request: Request, body: QueryRequest):
+    logger.info("query_request", question_len=len(body.question))
 
     if not retrieval_chain.is_ready:
         logger.warning("query_no_index")
@@ -109,8 +137,8 @@ async def query_documents(request: QueryRequest):
         )
     try:
         result = retrieval_chain.query(
-            question=request.question,
-            top_k=request.top_k,
+            question=body.question,
+            top_k=body.top_k,
         )
         return QueryResponse(
             answer=result["answer"],
