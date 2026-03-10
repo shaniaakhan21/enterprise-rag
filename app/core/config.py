@@ -8,7 +8,7 @@ class Settings(BaseSettings):
 
     # LLM
     llm_model: str = "gemini-1.5-flash"
-    embedding_model: str = "models/embedding-001"
+    embedding_model: str = "models/gemini-embedding-001"
     llm_temperature: float = 0.0
     llm_max_tokens: int = 1024
 
@@ -28,6 +28,12 @@ class Settings(BaseSettings):
     # App
     log_level: str = "INFO"
     app_version: str = "1.0.0"
+
+    # LangSmith — all optional, tracing disabled if not set
+    langchain_tracing_v2: str = "false"
+    langchain_endpoint: str = "https://api.smith.langchain.com"
+    langchain_api_key: str = ""
+    langchain_project: str = "enterprise-rag"
 
     class Config:
         env_file = ".env"

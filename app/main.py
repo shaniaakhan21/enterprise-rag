@@ -13,6 +13,8 @@ from app.models.schemas import (
     HealthResponse,
 )
 
+import os
+
 settings = get_settings()
 setup_logging(settings.log_level)
 
@@ -24,7 +26,22 @@ retrieval_chain = None
 async def lifespan(app: FastAPI):
     global ingestion_pipeline, retrieval_chain
 
-    logger.info("startup", version=settings.app_version)
+    # Set LangSmith env vars so LangChain picks them up automatically
+    # LangChain reads these from environment, not from our settings object
+    os.environ["LANGCHAIN_TRACING_V2"] = settings.langchain_tracing_v2
+    os.environ["LANGCHAIN_ENDPOINT"] = settings.langchain_endpoint
+    os.environ["LANGCHAIN_PROJECT"] = settings.langchain_project
+    if settings.langchain_api_key:
+        os.environ["LANGCHAIN_API_KEY"] = settings.langchain_api_key
+
+    tracing_enabled = settings.langchain_tracing_v2 == "true"
+    logger.info(
+        "startup",
+        version=settings.app_version,
+        langsmith_tracing=tracing_enabled,
+        langsmith_project=settings.langchain_project if tracing_enabled else None,
+    )
+
     ingestion_pipeline = IngestionPipeline()
     retrieval_chain = RetrievalChain()
     logger.info("startup_complete", index_loaded=retrieval_chain.is_ready)
