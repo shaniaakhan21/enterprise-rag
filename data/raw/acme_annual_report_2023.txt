@@ -1,0 +1,113 @@
+ACME FINANCIAL CORPORATION
+ANNUAL REPORT — FISCAL YEAR 2023
+
+BUSINESS OVERVIEW
+Acme Financial Corporation is a diversified financial services company
+headquartered in New York. We provide investment management, wealth advisory,
+and institutional banking services across 42 countries with $487 billion
+in assets under management as of December 31, 2023.
+
+COMPETITIVE POSITION
+Our competitive advantage rests on three pillars: a proprietary quantitative
+research platform AcmeAlpha, deep client relationships averaging 14 years
+with our top 50 institutional clients, and a cost-efficient operating model
+with an industry-leading expense ratio of 52 basis points.
+
+EMPLOYEES
+As of December 31, 2023, the company employed 8,742 full-time equivalent
+employees globally, of whom 3,104 are based in the United States.
+
+FINANCIAL HIGHLIGHTS FY2023
+Total Revenue               $4.82 billion
+Net Revenue                 $4.11 billion
+Operating Income            $1.24 billion
+Net Income                  $0.93 billion
+Net Income Margin           19.3%
+Diluted EPS                 $12.47
+Basic EPS                   $12.61
+
+FINANCIAL HIGHLIGHTS FY2022
+Total Revenue               $4.31 billion
+Net Income                  $0.79 billion
+Net Income Margin           18.3%
+
+FINANCIAL HIGHLIGHTS FY2021
+Total Revenue               $3.95 billion
+Net Income                  $0.71 billion
+Net Income Margin           18.0%
+
+BALANCE SHEET
+Cash and Cash Equivalents   $2.14 billion
+Total Assets                $18.6 billion
+Total Long-Term Debt         $3.2 billion
+Total Equity                 $9.8 billion
+Current Assets               $4.87 billion
+Current Liabilities          $2.93 billion
+Current Ratio                1.66x
+
+CASH FLOW
+Capital Expenditures         $187 million
+Depreciation & Amortization  $124 million
+Operating Cash Flow          $1.31 billion
+
+REVENUE BREAKDOWN BY SEGMENT
+Investment Management Fees   $3.41 billion  (71%)
+Advisory and Consulting      $0.87 billion  (18%)
+Performance Fees             $0.34 billion   (7%)
+Other Revenue                $0.20 billion   (4%)
+
+GEOGRAPHIC REVENUE
+North America                $2.65 billion  (55%)
+Europe Middle East Africa    $1.11 billion  (23%)
+Asia-Pacific                 $0.82 billion  (17%)
+Latin America and Other      $0.24 billion   (5%)
+
+MANAGEMENT DISCUSSION AND ANALYSIS
+Fiscal year 2023 represented strong execution against our strategic priorities.
+Total revenue grew 11.8% year-over-year to $4.82 billion, driven by record
+net inflows of $62 billion and disciplined fee management. Net income increased
+17.7% to $930 million reflecting operating leverage and lower interest expense.
+Management expects full-year 2024 revenue growth of 8-12%.
+
+RISK FACTORS
+Market Risk: A 10% decline in equity markets would reduce annual revenue by
+approximately $185 million. Cybersecurity incidents could disrupt operations.
+Our top 10 clients account for approximately 31% of total AUM.
+Regulatory changes including SEC rules and MiFID II may increase compliance costs.
+
+ACCOUNTING POLICIES
+Revenue is recognised in accordance with ASC 606. Management fees are recognised
+ratably over the performance period. The effective tax rate for fiscal year 2023
+was 22.4% compared to 23.1% in 2022.
+
+STOCK BASED COMPENSATION
+Stock-based compensation expense for fiscal year 2023 was $148 million compared
+to $132 million in 2022. Unrecognised compensation cost was $312 million.
+
+DIVIDENDS
+During fiscal year 2023 the company paid cash dividends of $4.20 per share
+totalling $314 million in aggregate. The Board declared a quarterly dividend
+increase to $1.15 per share in Q4 2023.
+
+LONG TERM DEBT
+Total long-term debt outstanding was $3.2 billion comprised of:
+4.25% Senior Notes due 2028: $1.0 billion
+3.75% Senior Notes due 2031: $1.2 billion
+5.10% Senior Notes due 2033: $1.0 billion
+
+LEGAL PROCEEDINGS
+A putative class action was filed in November 2022 in the Southern District
+of New York alleging violations of federal securities laws. The company believes
+the claims are without merit and is vigorously defending the action.
+
+ESG AND SUSTAINABILITY
+Acme Financial is committed to net-zero carbon emissions by 2035 across
+operations and by 2050 across our investment portfolio. In 2023 we reduced
+Scope 1 and Scope 2 emissions by 18% versus our 2019 baseline.
+Our MSCI ESG Rating was upgraded to AA in 2023 from A in 2022.
+40% of senior leadership roles are held by women up from 35% in 2022.
+
+EARNINGS PER SHARE
+Basic EPS                    $12.61
+Diluted EPS                  $12.47
+Shares outstanding           74.9 million
