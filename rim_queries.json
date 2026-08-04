@@ -1,0 +1,552 @@
+[
+  {
+    "id": "Q001",
+    "category": "outlier",
+    "source_file": "outlier_personal.txt",
+    "target_chunk_id": "07834efc-7678-4c31-9170-a10bd882e083",
+    "target_chunk_index": 1,
+    "corpus_frequency": 0,
+    "chunk_preview": "Insurance: Blue Cross Blue Shield Policy BCB-8847291\nPrimary Care: Dr. Anita Patel Women's Health Associates",
+    "question": "What information does the document contain about Maria Elena Rodriguez's insurance and primary care provider?"
+  },
+  {
+    "id": "Q002",
+    "category": "outlier",
+    "source_file": "outlier_benefits.txt",
+    "target_chunk_id": "09a7568e-14ad-48d7-be24-82cac60e0af2",
+    "target_chunk_index": 2,
+    "corpus_frequency": 2,
+    "chunk_preview": "Prior History: Applicant received SNAP benefits from 2021-2023, which were\ndiscontinued after a income redetermination f",
+    "question": "What information does the document contain about the prior benefits history for Robert T. Aldenberg?"
+  },
+  {
+    "id": "Q003",
+    "category": "outlier",
+    "source_file": "outlier_legal.txt",
+    "target_chunk_id": "0a2bc052-4b88-4994-9b77-b5f916ad01bd",
+    "target_chunk_index": 0,
+    "corpus_frequency": 0,
+    "chunk_preview": "CONFIDENTIAL LEGAL MEMORANDUM\nMatter: Wrongful Termination Claim - Johnson v. TechCorp Inc.\nDate: April 2, 2024\nAttorney",
+    "question": "What information does the document contain about the facts of the Johnson v. TechCorp Inc. wrongful termination matter?"
+  },
+  {
+    "id": "Q004",
+    "category": "outlier",
+    "source_file": "outlier_travel.txt",
+    "target_chunk_id": "1fda03f9-d27f-4e42-ba9d-2f2966497013",
+    "target_chunk_index": 1,
+    "corpus_frequency": 1,
+    "chunk_preview": "were non-sensitive draft copies; originals remain on file at the Lagos\noffice. Traveler was rebooked on the next availab",
+    "question": "What information does the document contain about the resolution of Amara Okonjo's travel security incident?"
+  },
+  {
+    "id": "Q005",
+    "category": "outlier",
+    "source_file": "outlier_legal.txt",
+    "target_chunk_id": "2f534124-5e7c-48ef-b659-4bf93e98f782",
+    "target_chunk_index": 1,
+    "corpus_frequency": 0,
+    "chunk_preview": "Potential damages: Lost wages $127,000 annually plus benefits.\nSettlement range: $200,000 to $450,000 based on comparabl",
+    "question": "What information does the document contain about the potential damages and settlement range in the Johnson v. TechCorp Inc. matter?"
+  },
+  {
+    "id": "Q006",
+    "category": "outlier",
+    "source_file": "outlier_support.txt",
+    "target_chunk_id": "37ae12ee-dc59-436e-a61f-557a067cdc44",
+    "target_chunk_index": 1,
+    "corpus_frequency": 1,
+    "chunk_preview": "Agent notes: Verified order history \u2014 two prior damage claims filed on\nthis account (May 14 and July 22, 2025). Original",
+    "question": "What information does the document contain about the account history and billing issue for ticket CS-2025-77291?"
+  },
+  {
+    "id": "Q007",
+    "category": "outlier",
+    "source_file": "outlier_whistleblower.txt",
+    "target_chunk_id": "410fa47f-a6a1-425e-9e08-37e76771cbb9",
+    "target_chunk_index": 2,
+    "corpus_frequency": 2,
+    "chunk_preview": "Investigation Status: Preliminary review of expense system flagged 11\ntransactions matching the described pattern. Corpo",
+    "question": "What information does the document contain about the investigation status of whistleblower report ETH-2025-3391?"
+  },
+  {
+    "id": "Q008",
+    "category": "outlier",
+    "source_file": "outlier_support.txt",
+    "target_chunk_id": "42bef59e-1f32-4da2-b9ff-d46e495e93f3",
+    "target_chunk_index": 2,
+    "corpus_frequency": 1,
+    "chunk_preview": "Resolution: Issued full refund of $86.40 and added $25 loyalty credit\nmanually. Escalated the billing sync bug to engine",
+    "question": "What information does the document contain about the resolution of support ticket CS-2025-77291?"
+  },
+  {
+    "id": "Q009",
+    "category": "outlier",
+    "source_file": "outlier_benefits.txt",
+    "target_chunk_id": "478339f0-490f-41b8-a579-c72330ad61e0",
+    "target_chunk_index": 0,
+    "corpus_frequency": 2,
+    "chunk_preview": "CONFIDENTIAL \u2014 GOVERNMENT BENEFITS CASE FILE\nCase Number: DHS-2025-114487\nApplicant: Robert T. Aldenberg, SSN on file\nPr",
+    "question": "What information does the document contain about the government benefits case file for Robert T. Aldenberg?"
+  },
+  {
+    "id": "Q010",
+    "category": "outlier",
+    "source_file": "outlier_medical.txt",
+    "target_chunk_id": "6adf56d7-26f6-4d64-8ad4-e39a2138b61a",
+    "target_chunk_index": 0,
+    "corpus_frequency": 0,
+    "chunk_preview": "PATIENT CASE SUMMARY - CONFIDENTIAL\nPatient ID: PT-2024-00847\nAdmission Date: March 15, 2024\nPrimary Diagnosis: Acute my",
+    "question": "What information does the document contain about patient PT-2024-00847's admission and diagnosis details?"
+  },
+  {
+    "id": "Q011",
+    "category": "outlier",
+    "source_file": "outlier_incident.txt",
+    "target_chunk_id": "6d737970-f1bf-4090-b7eb-7dd728fe3cdb",
+    "target_chunk_index": 1,
+    "corpus_frequency": 1,
+    "chunk_preview": "out at 03:19 UTC.\nImpact: Approximately 6,200 checkout attempts failed with HTTP 504 errors.\nEstimated revenue impact: $",
+    "question": "What information does the document contain about the impact and resolution of incident INC-2025-0442?"
+  },
+  {
+    "id": "Q012",
+    "category": "outlier",
+    "source_file": "outlier_hr.txt",
+    "target_chunk_id": "7a9b4607-f71e-45ef-a73b-a9cf46546cd0",
+    "target_chunk_index": 1,
+    "corpus_frequency": 0,
+    "chunk_preview": "procedure in November 2023.\nAction Taken: Final written warning issued, mandatory recertification\nwithin 30 days, and a ",
+    "question": "What information does the document contain about the disciplinary action taken against employee Marcus Webb?"
+  },
+  {
+    "id": "Q013",
+    "category": "outlier",
+    "source_file": "outlier_grant.txt",
+    "target_chunk_id": "7cf5573b-67c2-45a0-a6eb-73a3fac42df5",
+    "target_chunk_index": 2,
+    "corpus_frequency": 1,
+    "chunk_preview": "Preliminary Data: A prototype tested on the 2021 Dixie Fire perimeter data\nachieved 84% spatial overlap with observed fi",
+    "question": "What information does the document contain about the preliminary data in grant proposal NSF-2025-88231?"
+  },
+  {
+    "id": "Q014",
+    "category": "outlier",
+    "source_file": "outlier_personal.txt",
+    "target_chunk_id": "8752134c-c062-44b2-865a-8eb62dba859b",
+    "target_chunk_index": 0,
+    "corpus_frequency": 0,
+    "chunk_preview": "PERSONAL HEALTH RECORD - STRICTLY CONFIDENTIAL\nName: Maria Elena Rodriguez\nDate of Birth: 09/14/1987\nMedical Record Numb",
+    "question": "What information does the document contain about Maria Elena Rodriguez's medical and reproductive history?"
+  },
+  {
+    "id": "Q015",
+    "category": "outlier",
+    "source_file": "outlier_travel.txt",
+    "target_chunk_id": "93f91662-6859-4a63-bfdf-db426432985f",
+    "target_chunk_index": 0,
+    "corpus_frequency": 1,
+    "chunk_preview": "CONFIDENTIAL \u2014 TRAVEL SECURITY INCIDENT NOTE\nTraveler: Amara Okonjo, Employee ID EMP-53017\nTrip: Lagos to Frankfurt, con",
+    "question": "What information does the document contain about the travel security incident details for Amara Okonjo?"
+  },
+  {
+    "id": "Q016",
+    "category": "outlier",
+    "source_file": "outlier_whistleblower.txt",
+    "target_chunk_id": "951cccf1-4b75-43f8-b48a-1234cdc2f732",
+    "target_chunk_index": 0,
+    "corpus_frequency": 1,
+    "chunk_preview": "CONFIDENTIAL \u2014 WHISTLEBLOWER HOTLINE REPORT\nReport ID: ETH-2025-3391\nSubmission Method: Anonymous, third-party ethics ho",
+    "question": "What information does the document contain about whistleblower report ETH-2025-3391's submission details?"
+  },
+  {
+    "id": "Q017",
+    "category": "outlier",
+    "source_file": "outlier_benefits.txt",
+    "target_chunk_id": "9ca3a984-e687-467a-b347-9586aa11d3e2",
+    "target_chunk_index": 1,
+    "corpus_frequency": 2,
+    "chunk_preview": "Household size: 3 (applicant, spouse, one dependent minor)\nReported monthly income: $2,140 (part-time warehouse work, 28",
+    "question": "What information does the document contain about the household and income details in Robert T. Aldenberg's benefits case?"
+  },
+  {
+    "id": "Q018",
+    "category": "outlier",
+    "source_file": "outlier_whistleblower.txt",
+    "target_chunk_id": "a04e73d1-6947-4174-b07a-0683e00f9012",
+    "target_chunk_index": 3,
+    "corpus_frequency": 2,
+    "chunk_preview": "Preliminary Risk Rating: Moderate \u2014 dollar amount is below the mandatory\nexternal-disclosure threshold, but pattern sugg",
+    "question": "What information does the document contain about the risk rating in whistleblower report ETH-2025-3391?"
+  },
+  {
+    "id": "Q019",
+    "category": "outlier",
+    "source_file": "outlier_medical.txt",
+    "target_chunk_id": "aed81802-43fd-43a1-b581-6a8c9d7189ba",
+    "target_chunk_index": 1,
+    "corpus_frequency": 0,
+    "chunk_preview": "Follow-up: Cardiac rehabilitation program scheduled\nAttending Physician: Dr. Sarah Mitchell, Cardiology",
+    "question": "What information does the document contain about patient PT-2024-00847's follow-up care and attending physician?"
+  },
+  {
+    "id": "Q020",
+    "category": "outlier",
+    "source_file": "outlier_whistleblower.txt",
+    "target_chunk_id": "b404dfa9-029e-40a8-ae1a-c3f6d472017b",
+    "target_chunk_index": 1,
+    "corpus_frequency": 1,
+    "chunk_preview": "Allegation Summary: Reporter alleges that a regional sales director has\nbeen approving falsified expense reports for a s",
+    "question": "What information does the document contain about the allegation summary in whistleblower report ETH-2025-3391?"
+  },
+  {
+    "id": "Q021",
+    "category": "outlier",
+    "source_file": "outlier_grant.txt",
+    "target_chunk_id": "be51d959-2788-41dd-8643-136b20ddf7ba",
+    "target_chunk_index": 0,
+    "corpus_frequency": 0,
+    "chunk_preview": "CONFIDENTIAL \u2014 GRANT PROPOSAL EXCERPT (PEER REVIEW COPY)\nProposal ID: NSF-2025-88231\nTitle: \"Adaptive Mesh Refinement fo",
+    "question": "What information does the document contain about grant proposal NSF-2025-88231's title and funding request?"
+  },
+  {
+    "id": "Q022",
+    "category": "outlier",
+    "source_file": "outlier_support.txt",
+    "target_chunk_id": "d3873979-74e9-4fbc-a96a-3b0a66ef62ee",
+    "target_chunk_index": 0,
+    "corpus_frequency": 0,
+    "chunk_preview": "CONFIDENTIAL \u2014 CUSTOMER SUPPORT ESCALATION TRANSCRIPT\nTicket ID: CS-2025-77291\nCustomer: Denise Okafor, Account #4482910",
+    "question": "What information does the document contain about customer Denise Okafor's support ticket CS-2025-77291 complaint?"
+  },
+  {
+    "id": "Q023",
+    "category": "outlier",
+    "source_file": "outlier_grant.txt",
+    "target_chunk_id": "d41316e5-0faa-4343-99c8-910039e469ed",
+    "target_chunk_index": 1,
+    "corpus_frequency": 1,
+    "chunk_preview": "Specific Aims: This project proposes to develop a GPU-accelerated adaptive\nmesh refinement solver capable of simulating ",
+    "question": "What information does the document contain about the specific aims of grant proposal NSF-2025-88231?"
+  },
+  {
+    "id": "Q024",
+    "category": "outlier",
+    "source_file": "outlier_incident.txt",
+    "target_chunk_id": "ea265d76-f80a-490d-9cfe-3caf834ffed1",
+    "target_chunk_index": 0,
+    "corpus_frequency": 1,
+    "chunk_preview": "CONFIDENTIAL \u2014 INTERNAL INCIDENT POSTMORTEM\nIncident ID: INC-2025-0442\nService: payments-gateway-v3\nSeverity: SEV-2\nDete",
+    "question": "What information does the document contain about the root cause of incident INC-2025-0442 on payments-gateway-v3?"
+  },
+  {
+    "id": "Q025",
+    "category": "outlier",
+    "source_file": "outlier_hr.txt",
+    "target_chunk_id": "ecfb77cd-ebb4-4d7f-8ee7-b20b4bf69826",
+    "target_chunk_index": 0,
+    "corpus_frequency": 0,
+    "chunk_preview": "CONFIDENTIAL HR DISCIPLINARY RECORD\nEmployee: Marcus Webb, ID# EMP-88214\nDepartment: Warehouse Operations, Night Shift\nD",
+    "question": "What information does the document contain about employee Marcus Webb's safety violation incident?"
+  },
+  {
+    "id": "Q026",
+    "category": "control",
+    "source_file": "apple_annual_report.txt",
+    "target_chunk_id": "0f765e57-47cf-4eb1-ae28-0ab8e0b95380",
+    "target_chunk_index": 14,
+    "corpus_frequency": 16,
+    "chunk_preview": "DIVIDENDS\nDividends and dividend equivalents declared per share or RSU were $1.02, $0.98 and $0.94 for fiscal years 2025",
+    "question": "What information does the document contain about Apple Inc.'s dividends, which reports a figure of $1.02?"
+  },
+  {
+    "id": "Q027",
+    "category": "control",
+    "source_file": "acme_annual_report_2023.txt",
+    "target_chunk_id": "0f09fd24-ec3a-4caa-abd4-50032c411c38",
+    "target_chunk_index": 2,
+    "corpus_frequency": 34,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2023\nTotal Revenue               $4.82 billion\nNet Revenue                 $4.11 billion\nOperatin",
+    "question": "What information does the document contain about Acme Financial Corporation's financial highlights fy2023, which reports a figure of $4.82 billion?"
+  },
+  {
+    "id": "Q028",
+    "category": "control",
+    "source_file": "thornbury_annual_report_2023.txt",
+    "target_chunk_id": "0cb57082-aa70-402a-946c-3112ac9af261",
+    "target_chunk_index": 2,
+    "corpus_frequency": 34,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2023\nTotal Revenue               $2.94 billion\nNet Revenue                 $2.48 billion\nOperatin",
+    "question": "What information does the document contain about Thornbury Capital Advisors's financial highlights fy2023, which reports a figure of $2.94 billion?"
+  },
+  {
+    "id": "Q029",
+    "category": "control",
+    "source_file": "meridian_annual_report_2023.txt",
+    "target_chunk_id": "5f14f2c3-7b1e-4ab0-8655-2f61720acd0f",
+    "target_chunk_index": 2,
+    "corpus_frequency": 34,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2023\nTotal Revenue               $3.67 billion\nNet Revenue                 $3.02 billion\nOperatin",
+    "question": "What information does the document contain about Meridian Capital Group's financial highlights fy2023, which reports a figure of $3.67 billion?"
+  },
+  {
+    "id": "Q030",
+    "category": "control",
+    "source_file": "sableridge_annual_report_2023.txt",
+    "target_chunk_id": "ccf309fc-c4a3-4368-82ec-7086da817180",
+    "target_chunk_index": 2,
+    "corpus_frequency": 32,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2023\nTotal Revenue               $1.34 billion\nNet Revenue                 $1.11 billion\nOperatin",
+    "question": "What information does the document contain about Sable Ridge Investment Partners's financial highlights fy2023, which reports a figure of $1.34 billion?"
+  },
+  {
+    "id": "Q031",
+    "category": "control",
+    "source_file": "ridgemont_annual_report_2023.txt",
+    "target_chunk_id": "9fcf16ef-eb70-40b4-9016-d317f431e0c6",
+    "target_chunk_index": 2,
+    "corpus_frequency": 35,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2023\nTotal Revenue               $2.19 billion\nNet Revenue                 $1.85 billion\nOperatin",
+    "question": "What information does the document contain about Ridgemont Financial Holdings's financial highlights fy2023, which reports a figure of $2.19 billion?"
+  },
+  {
+    "id": "Q032",
+    "category": "control",
+    "source_file": "vantage_annual_report_2023.txt",
+    "target_chunk_id": "26cdd383-e252-4598-b805-ce0f189a8269",
+    "target_chunk_index": 2,
+    "corpus_frequency": 34,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2023\nTotal Revenue               $3.28 billion\nNet Revenue                 $2.79 billion\nOperatin",
+    "question": "What information does the document contain about Vantage Point Financial Group's financial highlights fy2023, which reports a figure of $3.28 billion?"
+  },
+  {
+    "id": "Q033",
+    "category": "control",
+    "source_file": "calloway_annual_report_2023.txt",
+    "target_chunk_id": "37a19313-7ccc-489e-b86b-10b7be713936",
+    "target_chunk_index": 2,
+    "corpus_frequency": 31,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2023\nTotal Revenue               $1.86 billion\nNet Revenue                 $1.54 billion\nOperatin",
+    "question": "What information does the document contain about Calloway Asset Management's financial highlights fy2023, which reports a figure of $1.86 billion?"
+  },
+  {
+    "id": "Q034",
+    "category": "control",
+    "source_file": "bexley_annual_report_2023.txt",
+    "target_chunk_id": "438a667e-0854-4a60-b22f-3b41c0f164e8",
+    "target_chunk_index": 2,
+    "corpus_frequency": 31,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2023\nTotal Revenue               $2.41 billion\nNet Revenue                 $2.03 billion\nOperatin",
+    "question": "What information does the document contain about Bexley Wealth Partners's financial highlights fy2023, which reports a figure of $2.41 billion?"
+  },
+  {
+    "id": "Q035",
+    "category": "control",
+    "source_file": "apple_annual_report.txt",
+    "target_chunk_id": "4e0160ca-8bcd-4e04-bb07-6631410899d2",
+    "target_chunk_index": 9,
+    "corpus_frequency": 15,
+    "chunk_preview": "Net income $ 112,010   $ 93,736   $ 96,995\nEarnings per share:\nBasic $ 7.49   $ 6.11   $ 6.16\nDiluted $ 7.46   $ 6.08   ",
+    "question": "What information does the document contain about Apple Inc.'s consolidated statements of operations (specifically net income), which reports a figure of $ 112,010?"
+  },
+  {
+    "id": "Q036",
+    "category": "control",
+    "source_file": "acme_annual_report_2023.txt",
+    "target_chunk_id": "793e9250-3d4f-456e-b198-ae420146452a",
+    "target_chunk_index": 2,
+    "corpus_frequency": 34,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2023\nTotal Revenue               $4.82 billion\nNet Revenue                 $4.11 billion\nOperatin",
+    "question": "What information does the document contain about Acme Financial Corporation's financial highlights fy2023, which reports a figure of $4.82 billion?"
+  },
+  {
+    "id": "Q037",
+    "category": "control",
+    "source_file": "thornbury_annual_report_2023.txt",
+    "target_chunk_id": "608afae3-e3ce-454d-9898-0b3d3615a6dd",
+    "target_chunk_index": 3,
+    "corpus_frequency": 21,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2021\nTotal Revenue               $2.41 billion\nNet Income                  $0.41 billion\nNet Inco",
+    "question": "What information does the document contain about Thornbury Capital Advisors's financial highlights fy2021, which reports a figure of $2.41 billion?"
+  },
+  {
+    "id": "Q038",
+    "category": "control",
+    "source_file": "meridian_annual_report_2023.txt",
+    "target_chunk_id": "c876a6c1-b9ac-48bd-922a-412bf062e8ae",
+    "target_chunk_index": 9,
+    "corpus_frequency": 20,
+    "chunk_preview": "DIVIDENDS\nDuring fiscal year 2023 the company paid cash dividends of $3.60 per share\ntotalling $198 million in aggregate",
+    "question": "What information does the document contain about Meridian Capital Group's dividends, which reports a figure of $3.60 per share?"
+  },
+  {
+    "id": "Q039",
+    "category": "control",
+    "source_file": "sableridge_annual_report_2023.txt",
+    "target_chunk_id": "238761df-444e-4214-8431-c835a7ca2677",
+    "target_chunk_index": 3,
+    "corpus_frequency": 19,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2021\nTotal Revenue               $1.09 billion\nNet Income                  $0.18 billion\nNet Inco",
+    "question": "What information does the document contain about Sable Ridge Investment Partners's financial highlights fy2021, which reports a figure of $1.09 billion?"
+  },
+  {
+    "id": "Q040",
+    "category": "control",
+    "source_file": "ridgemont_annual_report_2023.txt",
+    "target_chunk_id": "585b2126-5b52-4620-ae8c-0f31d3c6ef65",
+    "target_chunk_index": 3,
+    "corpus_frequency": 25,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2021\nTotal Revenue               $1.80 billion\nNet Income                  $0.31 billion\nNet Inco",
+    "question": "What information does the document contain about Ridgemont Financial Holdings's financial highlights fy2021, which reports a figure of $1.80 billion?"
+  },
+  {
+    "id": "Q041",
+    "category": "control",
+    "source_file": "vantage_annual_report_2023.txt",
+    "target_chunk_id": "38019055-c122-4c67-9a94-8b804cc8d625",
+    "target_chunk_index": 9,
+    "corpus_frequency": 25,
+    "chunk_preview": "DIVIDENDS\nDuring fiscal year 2023 the company paid cash dividends of $3.40 per share\ntotalling $171 million in aggregate",
+    "question": "What information does the document contain about Vantage Point Financial Group's dividends, which reports a figure of $3.40 per share?"
+  },
+  {
+    "id": "Q042",
+    "category": "control",
+    "source_file": "calloway_annual_report_2023.txt",
+    "target_chunk_id": "dbfd81ca-1f34-4906-9aab-031d4e4d987c",
+    "target_chunk_index": 3,
+    "corpus_frequency": 22,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2021\nTotal Revenue               $1.52 billion\nNet Income                  $0.26 billion\nNet Inco",
+    "question": "What information does the document contain about Calloway Asset Management's financial highlights fy2021, which reports a figure of $1.52 billion?"
+  },
+  {
+    "id": "Q043",
+    "category": "control",
+    "source_file": "bexley_annual_report_2023.txt",
+    "target_chunk_id": "6ac70c1b-06ba-4c50-be68-0482db837f47",
+    "target_chunk_index": 3,
+    "corpus_frequency": 22,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2021\nTotal Revenue               $1.97 billion\nNet Income                  $0.34 billion\nNet Inco",
+    "question": "What information does the document contain about Bexley Wealth Partners's financial highlights fy2021, which reports a figure of $1.97 billion?"
+  },
+  {
+    "id": "Q044",
+    "category": "control",
+    "source_file": "apple_annual_report.txt",
+    "target_chunk_id": "758bfe24-f06d-4012-bb19-483c033eb852",
+    "target_chunk_index": 3,
+    "corpus_frequency": 14,
+    "chunk_preview": "NET SALES BY REPORTABLE SEGMENT\nThe following table shows net sales by reportable segment for 2025, 2024 and 2023 (dolla",
+    "question": "What information does the document contain about Apple Inc.'s net sales by reportable segment, which reports a figure of $ 178,353?"
+  },
+  {
+    "id": "Q045",
+    "category": "control",
+    "source_file": "acme_annual_report_2023.txt",
+    "target_chunk_id": "3b0cee6e-80fc-4d2f-8a6b-5a95d7b7b347",
+    "target_chunk_index": 9,
+    "corpus_frequency": 23,
+    "chunk_preview": "DIVIDENDS\nDuring fiscal year 2023 the company paid cash dividends of $4.20 per share\ntotalling $314 million in aggregate",
+    "question": "What information does the document contain about Acme Financial Corporation's dividends, which reports a figure of $4.20 per share?"
+  },
+  {
+    "id": "Q046",
+    "category": "control",
+    "source_file": "thornbury_annual_report_2023.txt",
+    "target_chunk_id": "cfb278f3-1a56-488d-81c9-ee9a225b40f2",
+    "target_chunk_index": 9,
+    "corpus_frequency": 19,
+    "chunk_preview": "DIVIDENDS\nDuring fiscal year 2023 the company paid cash dividends of $3.15 per share\ntotalling $154 million in aggregate",
+    "question": "What information does the document contain about Thornbury Capital Advisors's dividends, which reports a figure of $3.15 per share?"
+  },
+  {
+    "id": "Q047",
+    "category": "control",
+    "source_file": "meridian_annual_report_2023.txt",
+    "target_chunk_id": "a2322688-f847-47d3-899d-e941404a4fdd",
+    "target_chunk_index": 3,
+    "corpus_frequency": 19,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2021\nTotal Revenue               $3.01 billion\nNet Income                  $0.52 billion\nNet Inco",
+    "question": "What information does the document contain about Meridian Capital Group's financial highlights fy2021, which reports a figure of $3.01 billion?"
+  },
+  {
+    "id": "Q048",
+    "category": "control",
+    "source_file": "sableridge_annual_report_2023.txt",
+    "target_chunk_id": "25572164-56d0-49fe-b435-53b6dec40232",
+    "target_chunk_index": 9,
+    "corpus_frequency": 18,
+    "chunk_preview": "DIVIDENDS\nDuring fiscal year 2023 the company paid cash dividends of $1.85 per share\ntotalling $56 million in aggregate.",
+    "question": "What information does the document contain about Sable Ridge Investment Partners's dividends, which reports a figure of $1.85 per share?"
+  },
+  {
+    "id": "Q049",
+    "category": "control",
+    "source_file": "ridgemont_annual_report_2023.txt",
+    "target_chunk_id": "2611d9f8-7dcd-4da2-84d1-5e3dc0603b35",
+    "target_chunk_index": 9,
+    "corpus_frequency": 21,
+    "chunk_preview": "DIVIDENDS\nDuring fiscal year 2023 the company paid cash dividends of $2.55 per share\ntotalling $93 million in aggregate.",
+    "question": "What information does the document contain about Ridgemont Financial Holdings's dividends, which reports a figure of $2.55 per share?"
+  },
+  {
+    "id": "Q050",
+    "category": "control",
+    "source_file": "vantage_annual_report_2023.txt",
+    "target_chunk_id": "67035fa5-4706-4b71-a5de-875f64733833",
+    "target_chunk_index": 3,
+    "corpus_frequency": 21,
+    "chunk_preview": "FINANCIAL HIGHLIGHTS FY2021\nTotal Revenue               $2.70 billion\nNet Income                  $0.46 billion\nNet Inco",
+    "question": "What information does the document contain about Vantage Point Financial Group's financial highlights fy2021, which reports a figure of $2.70 billion?"
+  },
+  {
+    "id": "Q051",
+    "category": "control",
+    "source_file": "calloway_annual_report_2023.txt",
+    "target_chunk_id": "9784d04f-20f7-4b44-8cad-a828c58106fc",
+    "target_chunk_index": 9,
+    "corpus_frequency": 18,
+    "chunk_preview": "DIVIDENDS\nDuring fiscal year 2023 the company paid cash dividends of $2.30 per share\ntotalling $79 million in aggregate.",
+    "question": "What information does the document contain about Calloway Asset Management's dividends, which reports a figure of $2.30 per share?"
+  },
+  {
+    "id": "Q052",
+    "category": "control",
+    "source_file": "bexley_annual_report_2023.txt",
+    "target_chunk_id": "ba2d5788-83da-4d28-bfd9-f00167e87f76",
+    "target_chunk_index": 9,
+    "corpus_frequency": 19,
+    "chunk_preview": "DIVIDENDS\nDuring fiscal year 2023 the company paid cash dividends of $2.95 per share\ntotalling $128 million in aggregate",
+    "question": "What information does the document contain about Bexley Wealth Partners's dividends, which reports a figure of $2.95 per share?"
+  },
+  {
+    "id": "Q053",
+    "category": "control",
+    "source_file": "apple_annual_report.txt",
+    "target_chunk_id": "b9ec1ec4-bc70-478c-8555-69066a23387f",
+    "target_chunk_index": 8,
+    "corpus_frequency": 13,
+    "chunk_preview": "Gross margin 195,201   180,683   169,148\nOperating expenses:\nResearch and development 34,550   31,370   29,915\nSelling, ",
+    "question": "What information does the document contain about Apple Inc.'s consolidated statements of operations (specifically gross margin), which reports a figure of $ 112,010?"
+  },
+  {
+    "id": "Q054",
+    "category": "control",
+    "source_file": "acme_annual_report_2023.txt",
+    "target_chunk_id": "abd699fa-9da1-441f-b7af-d83167261598",
+    "target_chunk_index": 9,
+    "corpus_frequency": 23,
+    "chunk_preview": "DIVIDENDS\nDuring fiscal year 2023 the company paid cash dividends of $4.20 per share\ntotalling $314 million in aggregate",
+    "question": "What information does the document contain about Acme Financial Corporation's dividends, which reports a figure of $4.20 per share?"
+  },
+  {
+    "id": "Q055",
+    "category": "control",
+    "source_file": "thornbury_annual_report_2023.txt",
+    "target_chunk_id": "71f52ed7-6844-4750-b463-44394d1c2a01",
+    "target_chunk_index": 6,
+    "corpus_frequency": 17,
+    "chunk_preview": "MANAGEMENT DISCUSSION AND ANALYSIS\nFiscal year 2023 represented strong execution against our strategic priorities.\nTotal",
+    "question": "What information does the document contain about Thornbury Capital Advisors's management discussion and analysis, which reports a figure of $2.94 billion?"
+  }
+]

@@ -1,0 +1,21 @@
+CONFIDENTIAL — GRANT PROPOSAL EXCERPT (PEER REVIEW COPY)
+Proposal ID: NSF-2025-88231
+Title: "Adaptive Mesh Refinement for Real-Time Wildfire Spread Simulation"
+Principal Investigator: Dr. Helena Wu, Department of Atmospheric Sciences
+Requested Amount: $742,000 over 3 years
+Institution: not disclosed pending award notification
+
+Specific Aims: This project proposes to develop a GPU-accelerated adaptive
+mesh refinement solver capable of simulating wildfire spread at 10-meter
+resolution across a 500 km² domain in under 15 minutes, a tenfold speedup
+over existing operational models. Aim 1 will develop the core solver;
+Aim 2 will validate against the 2023 Canyon Creek Fire dataset; Aim 3 will
+build an operational prototype for county-level emergency management use.
+
+Preliminary Data: A prototype tested on the 2021 Dixie Fire perimeter data
+achieved 84% spatial overlap with observed fire spread at 6x real-time
+speed, using a single A100 GPU.
+
+Reviewer Note (confidential): Strong technical approach but budget for
+Aim 3 field deployment seems underscoped relative to described scope;
+recommend minor revision before funding decision.

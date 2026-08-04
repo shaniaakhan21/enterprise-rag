@@ -1,0 +1,1157 @@
+[
+  {
+    "id": "Q001",
+    "category": "outlier",
+    "source_file": "outlier_personal.txt",
+    "target_chunk_index": 1,
+    "question": "What information does the document contain about Maria Elena Rodriguez's insurance and primary care provider?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.14285714285714285,
+        "answer": "Maria Elena Rodriguez is insured by Blue Cross Blue Shield under policy number BCB-8847291. Her primary care provider is Dr. Anita Patel at Women's Health Associates."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 5566.5
+  },
+  {
+    "id": "Q002",
+    "category": "outlier",
+    "source_file": "outlier_benefits.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about the prior benefits history for Robert T. Aldenberg?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2,
+        "answer": "Robert T. Aldenberg received SNAP benefits from 2021-2023. These benefits were discontinued following an income redetermination that found his household earnings temporarily exceeded the threshold. Additionally, the applicant appealed a benefits reduction in March 2024, which was denied."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.18181818181818182,
+        "answer": "Robert T. Aldenberg received SNAP benefits from 2021-2023. These benefits were discontinued following an income redetermination that found his household earnings temporarily exceeded the threshold. Additionally, he appealed a benefits reduction in March 2024, which was denied."
+      }
+    },
+    "latency_ms": 2801.5
+  },
+  {
+    "id": "Q003",
+    "category": "outlier",
+    "source_file": "outlier_legal.txt",
+    "target_chunk_index": 0,
+    "question": "What information does the document contain about the facts of the Johnson v. TechCorp Inc. wrongful termination matter?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.09523809523809523,
+        "answer": "Regarding the *Johnson v. TechCorp Inc.* matter, the document provides the following facts:\n\n*   **Termination Date:** February 28, 2024.\n*   **Tenure:** The client had 7 years of service.\n*   **Cause:** The termination occurred without documented cause.\n*   **Severance:** The client received no severance package.\n*   **Performance:** For the 3 years preceding the termination, the client\u2019s performance reviews were all rated \"Exceeds Expectations.\""
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.15873015873015872,
+        "answer": "Regarding the Johnson v. TechCorp Inc. matter, the documents state the following facts:\n\n*   **Termination Date:** The client was terminated on February 28, 2024.\n*   **Tenure:** The client had 7 years of service.\n*   **Cause:** The termination occurred without documented cause.\n*   **Severance:** The client received no severance package.\n*   **Performance:** For the 3 years preceding the termination, the client\u2019s performance reviews were all rated \"Exceeds Expectations.\""
+      }
+    },
+    "latency_ms": 3407.1
+  },
+  {
+    "id": "Q004",
+    "category": "outlier",
+    "source_file": "outlier_travel.txt",
+    "target_chunk_index": 1,
+    "question": "What information does the document contain about the resolution of Amara Okonjo's travel security incident?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "The provided documents do not contain information regarding the resolution of Amara Okonjo's travel security incident. The resolution details provided (full refund of $86.40, loyalty credit, and JIRA-BILL-2291) pertain to a separate customer billing issue, not the missing luggage incident involving Amara Okonjo."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.4838709677419355,
+        "answer": "Regarding the resolution of Amara Okonjo's travel security incident:\n\n*   **IT Security:** The company laptop (asset tag IT-4471) was remotely wiped within 40 minutes of the report.\n*   **Travel Arrangements:** The traveler was rebooked on the next available connection.\n*   **Financial Reimbursement:** The traveler was reimbursed $340 for essential items in accordance with corporate travel policy section 6.2.\n*   **Documents:** The missing contract documents were confirmed to be non-sensitive drafts, as the originals remain on file at the Lagos office."
+      }
+    },
+    "latency_ms": 15625.9
+  },
+  {
+    "id": "Q005",
+    "category": "outlier",
+    "source_file": "outlier_legal.txt",
+    "target_chunk_index": 1,
+    "question": "What information does the document contain about the potential damages and settlement range in the Johnson v. TechCorp Inc. matter?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.29411764705882354,
+        "answer": "In the *Johnson v. TechCorp Inc.* matter, the potential damages are $127,000 annually plus benefits, and the settlement range is estimated between $200,000 and $450,000 based on comparable cases."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 12725.4
+  },
+  {
+    "id": "Q006",
+    "category": "outlier",
+    "source_file": "outlier_support.txt",
+    "target_chunk_index": 1,
+    "question": "What information does the document contain about the account history and billing issue for ticket CS-2025-77291?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.3333333333333333,
+        "answer": "Regarding account history and the billing issue for ticket CS-2025-77291, the document contains the following information:\n\n*   **Account History:** The customer has been with the company for six years. There are two prior damage claims on the account, filed on May 14 and July 22, 2025.\n*   **Billing Issue:** An original refund of $86.40 was never processed due to a billing system sync error (referenced as JIRA-BILL-2291). Additionally, a $25 loyalty credit promised by a previous agent was not applied to the account."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.3888888888888889,
+        "answer": "Regarding account history and the billing issue for ticket CS-2025-77291, the documents contain the following information:\n\n*   **Account History:** The customer, Denise Okafor (Account #4482910), has been a customer for six years. The account has two prior damage claims filed on May 14 and July 22, 2025. The current issue involves order #10029384, which arrived damaged for the second time.\n*   **Billing Issue:** An original refund of $86.40 was never processed due to a billing system sync error (referenced as JIRA-BILL-2291). Additionally, a $25 loyalty credit promised by a previous agent was not applied. \n*   **Resolution:** The issues were resolved on August 3, 2025, by manually issuing the $86.40 refund and the $25 loyalty credit, while escalating the sync bug to engineering."
+      }
+    },
+    "latency_ms": 12428.2
+  },
+  {
+    "id": "Q007",
+    "category": "outlier",
+    "source_file": "outlier_whistleblower.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about the investigation status of whistleblower report ETH-2025-3391?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.11764705882352941,
+        "answer": "The investigation status for report ETH-2025-3391 is currently in a preliminary review phase. Internal Audit has flagged 11 transactions that match the described pattern and has requested corporate card statements and calendar records for cross-reference. As of the report date, named individuals have not been notified, in accordance with standard investigation protocol."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 11563.8
+  },
+  {
+    "id": "Q008",
+    "category": "outlier",
+    "source_file": "outlier_support.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about the resolution of support ticket CS-2025-77291?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.10526315789473684,
+        "answer": "The resolution for ticket CS-2025-77291 involved issuing a full refund of $86.40 and manually adding a $25 loyalty credit. Additionally, the billing sync bug was escalated to engineering under reference JIRA-BILL-2291. Following this resolution, the customer provided a satisfaction score of 2/5."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents. The transcript for ticket CS-2025-77291 documents the customer's complaint regarding a damaged order and a pending refund, but it does not contain information regarding the resolution of the ticket."
+      }
+    },
+    "latency_ms": 11866.3
+  },
+  {
+    "id": "Q009",
+    "category": "outlier",
+    "source_file": "outlier_benefits.txt",
+    "target_chunk_index": 0,
+    "question": "What information does the document contain about the government benefits case file for Robert T. Aldenberg?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.34375,
+        "answer": "The document provides the following information regarding Robert T. Aldenberg\u2019s government benefits case (Case Number: DHS-2025-114487):\n\n*   **Program:** Supplemental Nutrition Assistance Program (SNAP) and Medicaid.\n*   **Filing Date:** July 9, 2025.\n*   **Caseworker:** Denise Marsh, District 7 Office.\n*   **Prior History:** The applicant received SNAP benefits from 2021\u20132023, which were discontinued due to an income redetermination. An appeal regarding a benefits reduction filed in March 2024 was denied.\n*   **Next Review Date:** January 15, 2026. The applicant is required to report any changes in household income or composition within 10 days.\n*   **Financial Context:** The file notes potential damages of $127,000 in annual lost wages plus benefits, with a settlement range of $200,000 to $450,000 based on comparable cases."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.34375,
+        "answer": "The document provides the following information regarding Robert T. Aldenberg\u2019s government benefits case (Case Number: DHS-2025-114487):\n\n*   **Program:** Supplemental Nutrition Assistance Program (SNAP) and Medicaid.\n*   **Filing Date:** July 9, 2025.\n*   **Caseworker:** Denise Marsh, District 7 Office.\n*   **Prior History:** The applicant received SNAP benefits from 2021\u20132023, which were discontinued due to household earnings temporarily exceeding the threshold. An appeal regarding a benefits reduction in March 2024 was denied.\n*   **Next Review Date:** January 15, 2026.\n*   **Reporting Requirements:** The applicant is required to report any changes in household income or composition within 10 days."
+      }
+    },
+    "latency_ms": 15034.6
+  },
+  {
+    "id": "Q010",
+    "category": "outlier",
+    "source_file": "outlier_medical.txt",
+    "target_chunk_index": 0,
+    "question": "What information does the document contain about patient PT-2024-00847's admission and diagnosis details?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.07692307692307693,
+        "answer": "Patient PT-2024-00847 was admitted on March 15, 2024. Their primary diagnosis was acute myocardial infarction with ST elevation, and their secondary diagnoses were Type 2 diabetes mellitus and hypertension."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.07692307692307693,
+        "answer": "Patient PT-2024-00847 was admitted on March 15, 2024. The primary diagnosis was acute myocardial infarction with ST elevation, and the secondary diagnoses were Type 2 diabetes mellitus and hypertension."
+      }
+    },
+    "latency_ms": 12255.8
+  },
+  {
+    "id": "Q011",
+    "category": "outlier",
+    "source_file": "outlier_incident.txt",
+    "target_chunk_index": 1,
+    "question": "What information does the document contain about the impact and resolution of incident INC-2025-0442?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.4430379746835443,
+        "answer": "Regarding incident INC-2025-0442, the impact and resolution are as follows:\n\n*   **Impact:** Approximately 6,200 checkout attempts failed with HTTP 504 errors, resulting in an estimated revenue loss of $38,000 in abandoned carts.\n*   **Resolution:** On-call engineer Priya Nandan manually killed the stuck migration process and restarted the connection pool at 03:54 UTC. Full recovery was confirmed at 03:59 UTC."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.02531645569620253,
+        "answer": "Regarding incident INC-2025-0442, the impact was as follows:\n\n*   **Duration:** The incident lasted 47 minutes, from 03:12 UTC to 03:59 UTC on 2025-09-14.\n*   **Operational Impact:** Downstream checkout requests began queuing and timing out at 03:19 UTC due to database connection pool exhaustion.\n*   **Root Cause:** The exhaustion was triggered by a stuck migration job (deploy #8823) that failed to release connections after a schema lock timeout.\n\nThe provided document does not contain information regarding the resolution of this incident."
+      }
+    },
+    "latency_ms": 12222.6
+  },
+  {
+    "id": "Q012",
+    "category": "outlier",
+    "source_file": "outlier_hr.txt",
+    "target_chunk_index": 1,
+    "question": "What information does the document contain about the disciplinary action taken against employee Marcus Webb?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.07317073170731707,
+        "answer": "The disciplinary action taken against Marcus Webb includes the following:\n\n*   **Final written warning:** Issued due to the incident on June 11, 2025.\n*   **Mandatory recertification:** Must be completed within 30 days.\n*   **Unpaid suspension:** A 3-day suspension effective June 16, 2025.\n*   **Future consequences:** Termination will occur if a third safety violation happens within 12 months."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.024390243902439025,
+        "answer": "The document states that Marcus Webb (ID# EMP-88214) was found operating a forklift without a current safety certification on June 11, 2025, which violated Section 4.2 of the Operations Safety Manual. No injuries or property damage occurred. This incident marks Webb's second safety violation in 18 months, following a missed lockout/tagout procedure in November 2023."
+      }
+    },
+    "latency_ms": 12142.7
+  },
+  {
+    "id": "Q013",
+    "category": "outlier",
+    "source_file": "outlier_grant.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about the preliminary data in grant proposal NSF-2025-88231?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.3269230769230769,
+        "answer": "The preliminary data for grant proposal NSF-2025-88231 indicates that a prototype tested on 2021 Dixie Fire perimeter data achieved 84% spatial overlap with observed fire spread at 6x real-time speed, utilizing a single A100 GPU."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 11506.9
+  },
+  {
+    "id": "Q014",
+    "category": "outlier",
+    "source_file": "outlier_personal.txt",
+    "target_chunk_index": 0,
+    "question": "What information does the document contain about Maria Elena Rodriguez's medical and reproductive history?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.015384615384615385,
+        "answer": "According to the provided medical record, Maria Elena Rodriguez\u2019s history includes the following:\n\n*   **Reproductive Health:** She has experienced irregular 35-45 day menstrual cycles since 2019. She has had two full-term pregnancies (2018 and 2021) and has used an IUD for contraception since January 2023. Her last Pap smear in October 2023 resulted in a normal finding.\n*   **Genetic Screening:** She tested negative for BRCA1/BRCA2 in 2022.\n*   **Mental Health:** She has an anxiety disorder and is prescribed 50mg of sertraline daily."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.015384615384615385,
+        "answer": "Maria Elena Rodriguez's medical and reproductive history includes the following:\n\n*   **Reproductive Health:** She has experienced irregular 35-45 day menstrual cycles since 2019. She has had two full-term pregnancies (2018 and 2021) and has used an IUD for contraception since January 2023. Her last Pap smear in October 2023 was normal.\n*   **Genetic Screening:** She tested negative for BRCA1/BRCA2 in 2022.\n*   **Mental Health:** She has an anxiety disorder and is prescribed 50mg of sertraline daily."
+      }
+    },
+    "latency_ms": 12942.0
+  },
+  {
+    "id": "Q015",
+    "category": "outlier",
+    "source_file": "outlier_travel.txt",
+    "target_chunk_index": 0,
+    "question": "What information does the document contain about the travel security incident details for Amara Okonjo?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.36923076923076925,
+        "answer": "The travel security incident involving Amara Okonjo (EMP-53017) occurred during a trip from Lagos to Frankfurt on September 18-19, 2025. Details include:\n\n*   **Incident:** Checked luggage containing a company laptop (asset tag IT-4471) and signed contract documents was reported missing upon arrival in Frankfurt (Airline reference: LH-CLM-88420).\n*   **Asset Security:** The laptop was remotely wiped by IT Security within 40 minutes of the report. The contract documents were non-sensitive draft copies, as the originals remain in the Lagos office.\n*   **Resolution:** The traveler was rebooked on the next available connection and reimbursed $340 for essential items, in accordance with corporate travel policy section 6.2."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.3230769230769231,
+        "answer": "The travel security incident involving Amara Okonjo (EMP-53017) occurred during a trip from Lagos to Frankfurt on September 18-19, 2025 (Airline reference: LH-CLM-88420). \n\nKey details include:\n*   **Incident:** Checked luggage containing a company laptop (asset tag IT-4471) and signed contract documents was reported missing upon arrival in Frankfurt.\n*   **Laptop Security:** The laptop was remotely wiped by IT Security within 40 minutes of the report.\n*   **Documents:** The contract documents were non-sensitive draft copies; the originals remain at the Lagos office.\n*   **Resolution:** The traveler was rebooked on the next available connection and reimbursed $340 for essential items, in accordance with corporate travel policy section 6.2."
+      }
+    },
+    "latency_ms": 13120.3
+  },
+  {
+    "id": "Q016",
+    "category": "outlier",
+    "source_file": "outlier_whistleblower.txt",
+    "target_chunk_index": 0,
+    "question": "What information does the document contain about whistleblower report ETH-2025-3391's submission details?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.16,
+        "answer": "The document states that whistleblower report ETH-2025-3391 was received on October 2, 2025, via an anonymous, third-party ethics hotline. It was assigned to Internal Audit, Case Officer #4471."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 11742.6
+  },
+  {
+    "id": "Q017",
+    "category": "outlier",
+    "source_file": "outlier_benefits.txt",
+    "target_chunk_index": 1,
+    "question": "What information does the document contain about the household and income details in Robert T. Aldenberg's benefits case?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2807017543859649,
+        "answer": "Robert T. Aldenberg\u2019s case file contains the following household and income details:\n\n*   **Household Size:** 3 (the applicant, his spouse, and one dependent minor).\n*   **Reported Monthly Income:** $2,140, derived from part-time warehouse work (28 hours/week).\n*   **Determination Basis:** The household income falls below 130% of the federal poverty line for a household of three.\n*   **Reporting Requirement:** The applicant is required to report any changes in household income or composition within 10 days."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.17543859649122806,
+        "answer": "Robert T. Aldenberg\u2019s household consists of three members (the applicant, his spouse, and one dependent minor). His reported monthly income is $2,140, derived from part-time warehouse work at 28 hours per week. This income level was determined to be below 130% of the federal poverty line for a household of three."
+      }
+    },
+    "latency_ms": 12037.3
+  },
+  {
+    "id": "Q018",
+    "category": "outlier",
+    "source_file": "outlier_whistleblower.txt",
+    "target_chunk_index": 3,
+    "question": "What information does the document contain about the risk rating in whistleblower report ETH-2025-3391?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.3793103448275862,
+        "answer": "The whistleblower report ETH-2025-3391 assigns a \"Moderate\" preliminary risk rating. The report notes that while the dollar amount is below the mandatory external-disclosure threshold, the pattern suggests \"deliberate policy circumvention rather than error.\""
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 12002.2
+  },
+  {
+    "id": "Q019",
+    "category": "outlier",
+    "source_file": "outlier_medical.txt",
+    "target_chunk_index": 1,
+    "question": "What information does the document contain about patient PT-2024-00847's follow-up care and attending physician?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.1111111111111111,
+        "answer": "Regarding patient PT-2024-00847, the document states that a cardiac rehabilitation program is scheduled for follow-up care. The attending physician is Dr. Sarah Mitchell, Cardiology."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "Regarding patient PT-2024-00847, the document states that a cardiac rehabilitation program is scheduled for follow-up care. I could not find information regarding the attending physician in the provided documents."
+      }
+    },
+    "latency_ms": 12746.6
+  },
+  {
+    "id": "Q020",
+    "category": "outlier",
+    "source_file": "outlier_whistleblower.txt",
+    "target_chunk_index": 1,
+    "question": "What information does the document contain about the allegation summary in whistleblower report ETH-2025-3391?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.4666666666666667,
+        "answer": "The whistleblower report (ETH-2025-3391) alleges that a regional sales director approved falsified expense reports for a subset of the sales team. The allegations include:\n\n*   **Nature of Fraud:** Reimbursement for client entertainment that did not occur.\n*   **Financial Impact:** An estimated $34,000 over the prior 14 months.\n*   **Evidence Cited:** The reporter claims to have observed calendar invites for \"client dinners\" on dates when the involved employees were confirmed to be traveling elsewhere."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.6666666666666666,
+        "answer": "The document states that a reporter alleges a regional sales director has been approving falsified expense reports for a subset of the sales team. These reports include reimbursements for client entertainment that did not occur, totaling an estimated $34,000 over the prior 14 months. The reporter claims to have seen calendar invites for \"client dinners\" on dates when the named employees were confirmed to be traveling elsewhere."
+      }
+    },
+    "latency_ms": 11902.7
+  },
+  {
+    "id": "Q021",
+    "category": "outlier",
+    "source_file": "outlier_grant.txt",
+    "target_chunk_index": 0,
+    "question": "What information does the document contain about grant proposal NSF-2025-88231's title and funding request?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.14634146341463414,
+        "answer": "Grant proposal NSF-2025-88231 is titled \"Adaptive Mesh Refinement for Real-Time Wildfire Spread Simulation\" and requests $742,000 in funding over a 3-year period."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 11619.7
+  },
+  {
+    "id": "Q022",
+    "category": "outlier",
+    "source_file": "outlier_support.txt",
+    "target_chunk_index": 0,
+    "question": "What information does the document contain about customer Denise Okafor's support ticket CS-2025-77291 complaint?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.08,
+        "answer": "Customer Denise Okafor (Account #4482910) contacted support on August 3, 2025, regarding order #10029384, which arrived damaged for the second time. Key details include:\n\n*   **History:** This is the customer's third contact regarding the issue. Agent notes confirm two prior damage claims filed on May 14 and July 22, 2025.\n*   **Financial Status:** An original refund of $86.40 was never processed due to a billing system sync error (JIRA-BILL-2291).\n*   **Customer Request:** The customer is requesting the full refund plus a $25 loyalty credit that was promised by a previous agent but never applied.\n*   **Customer Sentiment:** The customer has been with the company for six years and threatened to cancel her subscription if the issue is not resolved today."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.10666666666666667,
+        "answer": "Customer Denise Okafor (Account #4482910) contacted support on August 3, 2025, regarding ticket CS-2025-77291. She reported that her order (#10029384) arrived damaged for the second time and that she has not yet received a refund. This is her third contact regarding the issue, and she stated she is considering cancelling her six-year subscription if the matter is not resolved that day."
+      }
+    },
+    "latency_ms": 13280.7
+  },
+  {
+    "id": "Q023",
+    "category": "outlier",
+    "source_file": "outlier_grant.txt",
+    "target_chunk_index": 1,
+    "question": "What information does the document contain about the specific aims of grant proposal NSF-2025-88231?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.5373134328358209,
+        "answer": "The document outlines three specific aims for grant proposal NSF-2025-88231:\n\n*   **Aim 1:** Develop a GPU-accelerated adaptive mesh refinement solver capable of simulating wildfire spread at 10-meter resolution across a 500 km\u00b2 domain in under 15 minutes.\n*   **Aim 2:** Validate the solver against the 2023 Canyon Creek Fire dataset.\n*   **Aim 3:** Build an operational prototype for county-level emergency management use."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 11946.9
+  },
+  {
+    "id": "Q024",
+    "category": "outlier",
+    "source_file": "outlier_incident.txt",
+    "target_chunk_index": 0,
+    "question": "What information does the document contain about the root cause of incident INC-2025-0442 on payments-gateway-v3?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.13513513513513514,
+        "answer": "The root cause of incident INC-2025-0442 was a database connection pool exhaustion triggered by a stuck migration job (deploy #8823). This job failed to release connections following a schema lock timeout, which caused downstream checkout requests to queue and time out starting at 03:19 UTC."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.3108108108108108,
+        "answer": "The root cause of incident INC-2025-0442 was a database connection pool exhaustion triggered by a stuck migration job (deploy #8823) that failed to release connections after a schema lock timeout. This resulted in downstream checkout requests queuing and timing out starting at 03:19 UTC (Internal Incident Postmortem, Incident ID: INC-2025-0442)."
+      }
+    },
+    "latency_ms": 11930.5
+  },
+  {
+    "id": "Q025",
+    "category": "outlier",
+    "source_file": "outlier_hr.txt",
+    "target_chunk_index": 0,
+    "question": "What information does the document contain about employee Marcus Webb's safety violation incident?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.40540540540540543,
+        "answer": "On June 11, 2025, Marcus Webb (ID# EMP-88214) was found operating a forklift without a current safety certification, violating Section 4.2 of the Operations Safety Manual. No injuries or property damage occurred. This incident marks Webb's second safety violation in 18 months, following a missed lockout/tagout procedure in November 2023. \n\nAs a result, Webb received a final written warning, a mandatory recertification within 30 days, and a 3-day unpaid suspension effective June 16, 2025. A third violation within 12 months will result in termination."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.40540540540540543,
+        "answer": "On June 11, 2025, Marcus Webb (ID# EMP-88214) was found operating a forklift without a current safety certification, violating Section 4.2 of the Operations Safety Manual. No injuries or property damage occurred. This incident marks Webb's second safety violation in 18 months, following a missed lockout/tagout procedure in November 2023. \n\nAs a result, Webb received a final written warning, a 3-day unpaid suspension effective June 16, 2025, and must complete mandatory recertification within 30 days. A third violation within 12 months will result in termination. The disciplinary meeting was attended by union representative Dale Ferris (Local 442)."
+      }
+    },
+    "latency_ms": 12233.4
+  },
+  {
+    "id": "Q026",
+    "category": "control",
+    "source_file": "apple_annual_report.txt",
+    "target_chunk_index": 14,
+    "question": "What information does the document contain about Apple Inc.'s dividends, which reports a figure of $1.02?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2608695652173913,
+        "answer": "According to the provided documents, the figure of $1.02 represents the dividends and dividend equivalents declared per share or RSU for fiscal year 2025."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.08695652173913043,
+        "answer": "According to the \"DIVIDENDS\" section of the report, Apple Inc. declared dividends and dividend equivalents of $1.02 per share or RSU for the 2025 fiscal year."
+      }
+    },
+    "latency_ms": 14329.4
+  },
+  {
+    "id": "Q027",
+    "category": "control",
+    "source_file": "acme_annual_report_2023.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about Acme Financial Corporation's financial highlights fy2023, which reports a figure of $4.82 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.5102040816326531,
+        "answer": "For FY2023, Acme Financial Corporation reported a Total Revenue of $4.82 billion. Additional financial highlights for the same period include:\n\n*   **Net Revenue:** $4.11 billion\n*   **Operating Income:** $1.24 billion\n*   **Net Income:** $0.93 billion\n*   **Net Income Margin:** 19.3%\n*   **Diluted EPS:** $12.47\n*   **Basic EPS:** $12.61"
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "In fiscal year 2023, Acme Financial Corporation reported total revenue of $4.82 billion, representing an 11.8% year-over-year increase. This growth was driven by record net inflows of $62 billion and disciplined fee management (Management Discussion and Analysis)."
+      }
+    },
+    "latency_ms": 11836.9
+  },
+  {
+    "id": "Q028",
+    "category": "control",
+    "source_file": "thornbury_annual_report_2023.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about Thornbury Capital Advisors's financial highlights fy2023, which reports a figure of $2.94 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.5102040816326531,
+        "answer": "The document reports that for Fiscal Year 2023, Thornbury Capital Advisors achieved a Total Revenue of $2.94 billion. Additional financial highlights for this specific set of data include:\n\n*   **Net Revenue:** $2.48 billion\n*   **Operating Income:** $0.73 billion\n*   **Net Income:** $0.55 billion\n*   **Net Income Margin:** 18.7%\n*   **Diluted EPS:** $7.66\n*   **Basic EPS:** $7.79"
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 12748.2
+  },
+  {
+    "id": "Q029",
+    "category": "control",
+    "source_file": "meridian_annual_report_2023.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about Meridian Capital Group's financial highlights fy2023, which reports a figure of $3.67 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents. While the document lists a total revenue of $3.67 billion for FY2023 in the first set of financial highlights, it does not attribute that figure to Meridian Capital Group. The section specifically regarding Meridian Capital Group lists its FY2023 total revenue as $2.19 billion."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "The document identifies the $3.67 billion figure as the **Total Revenue** for Fiscal Year 2023."
+      }
+    },
+    "latency_ms": 11871.8
+  },
+  {
+    "id": "Q030",
+    "category": "control",
+    "source_file": "sableridge_annual_report_2023.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about Sable Ridge Investment Partners's financial highlights fy2023, which reports a figure of $1.34 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "For fiscal year 2023, the figure of $1.34 billion represents the company's **Total Revenue**."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "In fiscal year 2023, Sable Ridge Investment Partners reported total revenue of $1.34 billion, representing a 9.8% year-over-year growth. This performance was driven by record net inflows of $14 billion and disciplined fee management, as noted in the \"Management Discussion and Analysis\" section."
+      }
+    },
+    "latency_ms": 11773.8
+  },
+  {
+    "id": "Q031",
+    "category": "control",
+    "source_file": "ridgemont_annual_report_2023.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about Ridgemont Financial Holdings's financial highlights fy2023, which reports a figure of $2.19 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the FY2023 Financial Highlights, the figure of $2.19 billion represents the company's **Total Revenue** for the fiscal year 2023."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 11843.2
+  },
+  {
+    "id": "Q032",
+    "category": "control",
+    "source_file": "vantage_annual_report_2023.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about Vantage Point Financial Group's financial highlights fy2023, which reports a figure of $3.28 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.5102040816326531,
+        "answer": "For the fiscal year 2023, Vantage Point Financial Group reported a total revenue of $3.28 billion. Additional financial highlights for this period include:\n\n*   **Net Revenue:** $2.79 billion\n*   **Operating Income:** $0.81 billion\n*   **Net Income:** $0.61 billion\n*   **Net Income Margin:** 18.6%\n*   **Diluted EPS:** $8.55\n*   **Basic EPS:** $8.68"
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 11709.1
+  },
+  {
+    "id": "Q033",
+    "category": "control",
+    "source_file": "calloway_annual_report_2023.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about Calloway Asset Management's financial highlights fy2023, which reports a figure of $1.86 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the \"Financial Highlights FY2023\" section, the figure of $1.86 billion represents Calloway Asset Management's **Total Revenue** for the 2023 fiscal year."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "In fiscal year 2023, Calloway Asset Management reported total revenue of $1.86 billion, representing a 10.1% year-over-year increase. According to the Management Discussion and Analysis section, this growth was driven by record net inflows of $19 billion and disciplined fee management."
+      }
+    },
+    "latency_ms": 11782.1
+  },
+  {
+    "id": "Q034",
+    "category": "control",
+    "source_file": "bexley_annual_report_2023.txt",
+    "target_chunk_index": 2,
+    "question": "What information does the document contain about Bexley Wealth Partners's financial highlights fy2023, which reports a figure of $2.41 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "In the Fiscal Year 2023 financial highlights, the figure of $2.41 billion represents the company's **Total Revenue**."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "In fiscal year 2023, Bexley Wealth Partners reported total revenue of $2.41 billion, representing a 10.6% year-over-year increase. According to the Management Discussion and Analysis section, this growth was driven by record net inflows of $27 billion and disciplined fee management."
+      }
+    },
+    "latency_ms": 11721.0
+  },
+  {
+    "id": "Q035",
+    "category": "control",
+    "source_file": "apple_annual_report.txt",
+    "target_chunk_index": 9,
+    "question": "What information does the document contain about Apple Inc.'s consolidated statements of operations (specifically net income), which reports a figure of $ 112,010?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the Consolidated Statements of Operations, the $112,010 million figure represents Apple Inc.'s net income for the fiscal year ended September 27, 2025. For comparison, the document reports net income of $93,736 million for the year ended September 28, 2024, and $96,995 million for the year ended September 30, 2023."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the provided Consolidated Statements of Operations, the figure of $112,010 million represents Apple Inc.'s net income for the fiscal year ended September 27, 2025. This is compared to net income figures of $93,736 million and $96,995 million for the two preceding fiscal years, respectively."
+      }
+    },
+    "latency_ms": 12107.7
+  },
+  {
+    "id": "Q036",
+    "category": "control",
+    "source_file": "acme_annual_report_2023.txt",
+    "target_chunk_index": 9,
+    "question": "What information does the document contain about Acme Financial Corporation's dividends, which reports a figure of $4.20 per share?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.3150684931506849,
+        "answer": "According to the provided documents, in fiscal year 2023, the company paid cash dividends of $4.20 per share, totaling $314 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $1.15 per share in Q4 2023."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "During fiscal year 2023, Acme Financial Corporation paid cash dividends of $4.20 per share, totaling $314 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $1.15 per share in Q4 2023."
+      }
+    },
+    "latency_ms": 12001.4
+  },
+  {
+    "id": "Q037",
+    "category": "control",
+    "source_file": "thornbury_annual_report_2023.txt",
+    "target_chunk_index": 3,
+    "question": "What information does the document contain about Thornbury Capital Advisors's financial highlights fy2021, which reports a figure of $2.41 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the \"FINANCIAL HIGHLIGHTS FY2021\" section, the document reports that Thornbury Capital Advisors' Total Revenue for fiscal year 2021 was $2.41 billion. Additionally, for that same period, the company reported Net Income of $0.41 billion and a Net Income Margin of 17.0%."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents."
+      }
+    },
+    "latency_ms": 11689.8
+  },
+  {
+    "id": "Q038",
+    "category": "control",
+    "source_file": "meridian_annual_report_2023.txt",
+    "target_chunk_index": 9,
+    "question": "What information does the document contain about Meridian Capital Group's dividends, which reports a figure of $3.60 per share?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "According to the provided document, Meridian Capital Group paid cash dividends of $3.60 per share during fiscal year 2023, totaling $198 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.95 per share in Q4 2023."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "During fiscal year 2023, Meridian Capital Group paid cash dividends of $3.60 per share, which totaled $198 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.95 per share in Q4 2023."
+      }
+    },
+    "latency_ms": 11997.4
+  },
+  {
+    "id": "Q039",
+    "category": "control",
+    "source_file": "sableridge_annual_report_2023.txt",
+    "target_chunk_index": 3,
+    "question": "What information does the document contain about Sable Ridge Investment Partners's financial highlights fy2021, which reports a figure of $1.09 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.12727272727272726,
+        "answer": "According to the \"FINANCIAL HIGHLIGHTS FY2021\" section, the $1.09 billion figure represents the company's Total Revenue. Additionally, for that same period, the document reports:\n\n*   **Net Income:** $0.18 billion\n*   **Net Income Margin:** 16.5%"
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the \"FINANCIAL HIGHLIGHTS FY2021\" section, the $1.09 billion figure represents the company's Total Revenue for the 2021 fiscal year. Additionally, the document reports that for FY2021, Net Income was $0.18 billion and the Net Income Margin was 16.5%."
+      }
+    },
+    "latency_ms": 11987.1
+  },
+  {
+    "id": "Q040",
+    "category": "control",
+    "source_file": "ridgemont_annual_report_2023.txt",
+    "target_chunk_index": 3,
+    "question": "What information does the document contain about Ridgemont Financial Holdings's financial highlights fy2021, which reports a figure of $1.80 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.7636363636363637,
+        "answer": "According to the provided document, the financial highlights for FY2021 reporting $1.80 billion in total revenue also include the following:\n\n*   **Net Income:** $0.31 billion\n*   **Net Income Margin:** 17.2%\n*   **Cash and Cash Equivalents:** $0.98 billion\n*   **Total Assets:** $8.6 billion\n*   **Total Long-Term Debt:** $1.4 billion\n*   **Total Equity:** $4.5 billion\n*   **Current Assets:** $2.22 billion\n*   **Current Liabilities:** $1.28 billion\n*   **Current Ratio:** 1.74x"
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.12727272727272726,
+        "answer": "According to the \"FINANCIAL HIGHLIGHTS FY2021\" section, the $1.80 billion figure represents the company's Total Revenue for that fiscal year. Additionally, the document reports the following for FY2021:\n\n*   **Net Income:** $0.31 billion\n*   **Net Income Margin:** 17.2%"
+      }
+    },
+    "latency_ms": 11942.7
+  },
+  {
+    "id": "Q041",
+    "category": "control",
+    "source_file": "vantage_annual_report_2023.txt",
+    "target_chunk_index": 9,
+    "question": "What information does the document contain about Vantage Point Financial Group's dividends, which reports a figure of $3.40 per share?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "According to the provided documents, Vantage Point Financial Group paid cash dividends of $3.40 per share during fiscal year 2023, totaling $171 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.90 per share in Q4 2023."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "During fiscal year 2023, Vantage Point Financial Group paid cash dividends of $3.40 per share, totaling $171 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.90 per share in Q4 2023."
+      }
+    },
+    "latency_ms": 13854.9
+  },
+  {
+    "id": "Q042",
+    "category": "control",
+    "source_file": "calloway_annual_report_2023.txt",
+    "target_chunk_index": 3,
+    "question": "What information does the document contain about Calloway Asset Management's financial highlights fy2021, which reports a figure of $1.52 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the \"FINANCIAL HIGHLIGHTS FY2021\" section, the $1.52 billion figure represents the company's Total Revenue for that fiscal year."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the \"FINANCIAL HIGHLIGHTS FY2021\" section, the $1.52 billion figure represents the company's Total Revenue for that fiscal year. Additionally, the document reports that for FY2021, Net Income was $0.26 billion and the Net Income Margin was 17.1%."
+      }
+    },
+    "latency_ms": 11830.5
+  },
+  {
+    "id": "Q043",
+    "category": "control",
+    "source_file": "bexley_annual_report_2023.txt",
+    "target_chunk_index": 3,
+    "question": "What information does the document contain about Bexley Wealth Partners's financial highlights fy2021, which reports a figure of $1.97 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.12727272727272726,
+        "answer": "According to the provided documents, the financial highlights for FY2021 reporting $1.97 billion in total revenue also include the following figures:\n\n*   **Net Income:** $0.34 billion\n*   **Net Income Margin:** 17.3%"
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.12727272727272726,
+        "answer": "According to the \"FINANCIAL HIGHLIGHTS FY2021\" section, the $1.97 billion figure represents the company's Total Revenue for that fiscal year. Additionally, the document reports the following for FY2021:\n\n*   **Net Income:** $0.34 billion\n*   **Net Income Margin:** 17.3%"
+      }
+    },
+    "latency_ms": 11909.2
+  },
+  {
+    "id": "Q044",
+    "category": "control",
+    "source_file": "apple_annual_report.txt",
+    "target_chunk_index": 3,
+    "question": "What information does the document contain about Apple Inc.'s net sales by reportable segment, which reports a figure of $ 178,353?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.024390243902439025,
+        "answer": "The figure of $178,353 million represents the net sales for the **Americas** reportable segment for the fiscal year **2025**. According to the \"Net Sales by Reportable Segment\" table, this figure reflects a 7% change compared to the previous year."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "The document reports that the Americas segment achieved net sales of $178,353 million in 2025, representing a 7% increase compared to 2024. This growth was primarily driven by higher net sales of iPhone and Services."
+      }
+    },
+    "latency_ms": 12031.9
+  },
+  {
+    "id": "Q045",
+    "category": "control",
+    "source_file": "acme_annual_report_2023.txt",
+    "target_chunk_index": 3,
+    "question": "What information does the document contain about Acme Financial Corporation's financial highlights fy2021, which reports a figure of $3.95 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.12727272727272726,
+        "answer": "The provided documents contain two conflicting sets of \"FINANCIAL HIGHLIGHTS FY2021.\" The set reporting total revenue of $3.95 billion also lists the following:\n\n*   **Net Income:** $0.71 billion\n*   **Net Income Margin:** 18.0%"
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the \"FINANCIAL HIGHLIGHTS FY2021\" section, the $3.95 billion figure represents the company's Total Revenue for that fiscal year. Additionally, the document reports that for FY2021, Net Income was $0.71 billion and the Net Income Margin was 18.0%."
+      }
+    },
+    "latency_ms": 12246.5
+  },
+  {
+    "id": "Q046",
+    "category": "control",
+    "source_file": "thornbury_annual_report_2023.txt",
+    "target_chunk_index": 9,
+    "question": "What information does the document contain about Thornbury Capital Advisors's dividends, which reports a figure of $3.15 per share?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0958904109589041,
+        "answer": "According to the provided documents, Thornbury Capital Advisors paid cash dividends of $3.15 per share during fiscal year 2023, totaling $154 million in aggregate."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "During fiscal year 2023, Thornbury Capital Advisors paid cash dividends of $3.15 per share, which totaled $154 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.83 per share in Q4 2023."
+      }
+    },
+    "latency_ms": 11932.1
+  },
+  {
+    "id": "Q047",
+    "category": "control",
+    "source_file": "meridian_annual_report_2023.txt",
+    "target_chunk_index": 3,
+    "question": "What information does the document contain about Meridian Capital Group's financial highlights fy2021, which reports a figure of $3.01 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.7636363636363637,
+        "answer": "According to the document, the financial highlights for FY2021 reporting $3.01 billion in total revenue also include the following:\n\n*   **Net Income:** $0.52 billion\n*   **Net Income Margin:** 17.3%\n*   **Cash and Cash Equivalents:** $1.62 billion\n*   **Total Assets:** $14.3 billion\n*   **Total Long-Term Debt:** $2.4 billion\n*   **Total Equity:** $7.6 billion\n*   **Current Assets:** $3.71 billion\n*   **Current Liabilities:** $2.18 billion\n*   **Current Ratio:** 1.70x"
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the \"FINANCIAL HIGHLIGHTS FY2021\" section, the $3.01 billion figure represents the company's Total Revenue for that fiscal year. Additionally, the document reports that for FY2021, Meridian Capital Group had a Net Income of $0.52 billion and a Net Income Margin of 17.3%."
+      }
+    },
+    "latency_ms": 12237.8
+  },
+  {
+    "id": "Q048",
+    "category": "control",
+    "source_file": "sableridge_annual_report_2023.txt",
+    "target_chunk_index": 9,
+    "question": "What information does the document contain about Sable Ridge Investment Partners's dividends, which reports a figure of $1.85 per share?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "During fiscal year 2023, Sable Ridge Investment Partners paid cash dividends of $1.85 per share, which totaled $56 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.49 per share in Q4 2023."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "During fiscal year 2023, Sable Ridge Investment Partners paid cash dividends of $1.85 per share, which totaled $56 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.49 per share in Q4 2023."
+      }
+    },
+    "latency_ms": 11771.1
+  },
+  {
+    "id": "Q049",
+    "category": "control",
+    "source_file": "ridgemont_annual_report_2023.txt",
+    "target_chunk_index": 9,
+    "question": "What information does the document contain about Ridgemont Financial Holdings's dividends, which reports a figure of $2.55 per share?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "According to the provided documents, Ridgemont Financial Holdings paid cash dividends of $2.55 per share during fiscal year 2023, totaling $93 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.68 per share in Q4 2023."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0958904109589041,
+        "answer": "According to the \"Dividends\" section of the 2023 Annual Report, Ridgemont Financial Holdings paid cash dividends of $2.55 per share during fiscal year 2023, which totaled $93 million in aggregate."
+      }
+    },
+    "latency_ms": 12019.1
+  },
+  {
+    "id": "Q050",
+    "category": "control",
+    "source_file": "vantage_annual_report_2023.txt",
+    "target_chunk_index": 3,
+    "question": "What information does the document contain about Vantage Point Financial Group's financial highlights fy2021, which reports a figure of $2.70 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "The document reports that for the fiscal year 2021 (listed under \"FINANCIAL HIGHLIGHTS FY2021\"), Vantage Point Financial Group achieved a total revenue of $2.70 billion, a net income of $0.46 billion, and a net income margin of 17.0%."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the \"FINANCIAL HIGHLIGHTS FY2021\" section, the $2.70 billion figure represents the company's Total Revenue for that fiscal year. Additionally, the document reports that for FY2021, Net Income was $0.46 billion and the Net Income Margin was 17.0%."
+      }
+    },
+    "latency_ms": 11889.5
+  },
+  {
+    "id": "Q051",
+    "category": "control",
+    "source_file": "calloway_annual_report_2023.txt",
+    "target_chunk_index": 9,
+    "question": "What information does the document contain about Calloway Asset Management's dividends, which reports a figure of $2.30 per share?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "According to the \"Dividends\" section of the 2023 Annual Report, Calloway Asset Management paid cash dividends of $2.30 per share during fiscal year 2023, which totaled $79 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.61 per share in Q4 2023."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2602739726027397,
+        "answer": "During fiscal year 2023, Calloway Asset Management paid cash dividends of $2.30 per share, totaling $79 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.61 per share in Q4 2023."
+      }
+    },
+    "latency_ms": 12050.6
+  },
+  {
+    "id": "Q052",
+    "category": "control",
+    "source_file": "bexley_annual_report_2023.txt",
+    "target_chunk_index": 9,
+    "question": "What information does the document contain about Bexley Wealth Partners's dividends, which reports a figure of $2.95 per share?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2465753424657534,
+        "answer": "In fiscal year 2023, Bexley Wealth Partners paid cash dividends of $2.95 per share, which totaled $128 million in aggregate. Additionally, the Board declared a quarterly dividend increase to $0.78 per share in Q4 2023."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0821917808219178,
+        "answer": "In fiscal year 2023, Bexley Wealth Partners paid cash dividends of $2.95 per share, which totaled $128 million in aggregate (Section: DIVIDENDS)."
+      }
+    },
+    "latency_ms": 11780.1
+  },
+  {
+    "id": "Q053",
+    "category": "control",
+    "source_file": "apple_annual_report.txt",
+    "target_chunk_index": 8,
+    "question": "What information does the document contain about Apple Inc.'s consolidated statements of operations (specifically gross margin), which reports a figure of $ 112,010?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents. The provided \"Consolidated Statements of Operations\" and \"Gross Margin\" tables report a Products gross margin of $112,887 million for 2025, but they do not contain a figure of $112,010."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents. The document reports the 2025 Products gross margin as $112,887 million, not $112,010 million."
+      }
+    },
+    "latency_ms": 11909.7
+  },
+  {
+    "id": "Q054",
+    "category": "control",
+    "source_file": "acme_annual_report_2023.txt",
+    "target_chunk_index": 4,
+    "question": "What information does the document contain about Acme Financial Corporation's cash flow, which reports a figure of $187 million?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.0,
+        "answer": "According to the document, the $187 million figure represents Acme Financial Corporation's **Capital Expenditures** for the fiscal year 2023."
+      },
+      "no_rerank": {
+        "retrieved": false,
+        "reproduction_ratio": 0.0,
+        "answer": "I could not find this information in the provided documents. The provided text does not mention a cash flow figure of $187 million."
+      }
+    },
+    "latency_ms": 12400.7
+  },
+  {
+    "id": "Q055",
+    "category": "control",
+    "source_file": "thornbury_annual_report_2023.txt",
+    "target_chunk_index": 6,
+    "question": "What information does the document contain about Thornbury Capital Advisors's management discussion and analysis, which reports a figure of $2.94 billion?",
+    "candidate_hit": true,
+    "variants": {
+      "reranked": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2,
+        "answer": "According to the Management Discussion and Analysis section, the $2.94 billion figure represents the company's total revenue for fiscal year 2023, which reflects a 10.5% year-over-year growth. This performance was driven by record net inflows of $32 billion and disciplined fee management."
+      },
+      "no_rerank": {
+        "retrieved": true,
+        "reproduction_ratio": 0.2,
+        "answer": "According to the Management Discussion and Analysis section, the $2.94 billion figure represents the company's total revenue for fiscal year 2023, which reflects a 10.5% year-over-year growth. This performance was driven by record net inflows of $32 billion and disciplined fee management."
+      }
+    },
+    "latency_ms": 12616.2
+  }
+]

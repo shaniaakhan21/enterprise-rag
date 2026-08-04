@@ -1,0 +1,21 @@
+CONFIDENTIAL — CUSTOMER SUPPORT ESCALATION TRANSCRIPT
+Ticket ID: CS-2025-77291
+Customer: Denise Okafor, Account #4482910
+Channel: Live chat, escalated to Tier 2
+Date: August 3, 2025
+
+Customer summary: "This is the third time I'm contacting you about the
+same issue. My order #10029384 arrived damaged for the second time and
+nobody has refunded me yet. I've been a customer for six years and I'm
+honestly considering cancelling my subscription if this isn't fixed today."
+
+Agent notes: Verified order history — two prior damage claims filed on
+this account (May 14 and July 22, 2025). Original refund of $86.40 was
+never processed due to a billing system sync error (see JIRA-BILL-2291).
+Customer is requesting full refund plus the $25 loyalty credit promised
+by the previous agent, which was not applied.
+
+Resolution: Issued full refund of $86.40 and added $25 loyalty credit
+manually. Escalated the billing sync bug to engineering (ref JIRA-BILL-2291).
+Customer satisfaction score after resolution: 2/5 ("glad it's fixed but
+frustrated it took three tries").

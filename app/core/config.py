@@ -15,6 +15,8 @@ class Settings(BaseSettings):
     # Chunking
     chunk_size: int = 512
     chunk_overlap: int = 64
+    csv_rows_per_chunk: int = 25  # group CSV rows to cut embedding API calls
+    embed_batch_size: int = 10    # texts per embedding request — stay under the per-request token quota
 
     # Retrieval
     retrieval_top_k: int = 5

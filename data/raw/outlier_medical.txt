@@ -1,0 +1,10 @@
+PATIENT CASE SUMMARY - CONFIDENTIAL
+Patient ID: PT-2024-00847
+Admission Date: March 15, 2024
+Primary Diagnosis: Acute myocardial infarction with ST elevation
+Secondary Diagnosis: Type 2 diabetes mellitus, hypertension
+Treatment Protocol: Emergency percutaneous coronary intervention
+Medications: Aspirin 325mg, Clopidogrel 75mg, Atorvastatin 80mg
+Outcome: Successful revascularization, discharged after 5 days
+Follow-up: Cardiac rehabilitation program scheduled
+Attending Physician: Dr. Sarah Mitchell, Cardiology

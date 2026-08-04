@@ -1,0 +1,10 @@
+CONFIDENTIAL — TRAVEL SECURITY INCIDENT NOTE
+Traveler: Amara Okonjo, Employee ID EMP-53017
+Trip: Lagos to Frankfurt, connecting to New York, September 18-19, 2025
+Incident: Traveler's checked luggage containing a company laptop and
+signed contract documents was reported missing on arrival in Frankfurt.
+Airline reference: LH-CLM-88420. Laptop was remotely wiped by IT Security
+within 40 minutes of the report (asset tag IT-4471). Contract documents
+were non-sensitive draft copies; originals remain on file at the Lagos
+office. Traveler was rebooked on the next available connection and
+reimbursed $340 for essential items per corporate travel policy section 6.2.

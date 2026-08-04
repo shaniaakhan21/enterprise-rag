@@ -1,0 +1,22 @@
+CONFIDENTIAL — WHISTLEBLOWER HOTLINE REPORT
+Report ID: ETH-2025-3391
+Submission Method: Anonymous, third-party ethics hotline
+Date Received: October 2, 2025
+Assigned Investigator: Internal Audit, Case Officer #4471
+
+Allegation Summary: Reporter alleges that a regional sales director has
+been approving falsified expense reports for a subset of the sales team,
+including reimbursement for client entertainment that did not occur,
+totaling an estimated $34,000 over the prior 14 months. Reporter states
+they have seen calendar invites for "client dinners" on nights when the
+named employees were confirmed to be traveling elsewhere.
+
+Investigation Status: Preliminary review of expense system flagged 11
+transactions matching the described pattern. Corporate card statements
+and calendar records have been requested for cross-reference. Named
+individuals have not yet been notified per standard investigation protocol.
+
+Preliminary Risk Rating: Moderate — dollar amount is below the mandatory
+external-disclosure threshold, but pattern suggests deliberate policy
+circumvention rather than error.
+Next Step: Full forensic review, target completion November 15, 2025.

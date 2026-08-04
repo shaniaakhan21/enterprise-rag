@@ -1,0 +1,18 @@
+CONFIDENTIAL — INTERNAL INCIDENT POSTMORTEM
+Incident ID: INC-2025-0442
+Service: payments-gateway-v3
+Severity: SEV-2
+Detected: 2025-09-14 03:12 UTC by PagerDuty alert "checkout_latency_p99"
+Duration: 47 minutes (03:12 UTC to 03:59 UTC)
+Root Cause: A database connection pool exhaustion was triggered by a stuck
+migration job (deploy #8823) that failed to release connections after a
+schema lock timeout. Downstream checkout requests queued and began timing
+out at 03:19 UTC.
+Impact: Approximately 6,200 checkout attempts failed with HTTP 504 errors.
+Estimated revenue impact: $38,000 in abandoned carts.
+Resolution: On-call engineer Priya Nandan manually killed the stuck
+migration process and restarted the connection pool at 03:54 UTC; full
+recovery confirmed at 03:59 UTC.
+Action Items: Add a connection pool alert at 80% utilization (owner: SRE
+team, due 2025-09-28); add a migration timeout kill-switch (owner: Priya
+Nandan, due 2025-10-05).
