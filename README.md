@@ -7,7 +7,7 @@
 ![LangChain](https://img.shields.io/badge/LangChain-0.3-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white)
 ![Qdrant](https://img.shields.io/badge/Qdrant-1.12-DC244C?style=for-the-badge&logo=qdrant&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Gemini](https://img.shields.io/badge/Google_Gemini-1.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Gemini](https://img.shields.io/badge/Google_Gemini-3.1_Flash_Lite-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
 **Production-grade RAG pipeline for financial document Q&A.**  
 Hybrid retrieval · Cross-encoder reranking · Async ingestion · LangSmith tracing · Full security layer
@@ -20,7 +20,7 @@ Hybrid retrieval · Cross-encoder reranking · Async ingestion · LangSmith trac
 
 ## ✨ What This Does
 
-Ask natural language questions over financial documents (PDFs, 10-Ks, annual reports) and get accurate, cited answers in milliseconds.
+Ask natural language questions over financial documents (PDF, TXT, Markdown, CSV — 10-Ks, annual reports, tabular data) and get accurate, cited answers in milliseconds.
 
 ```
 Q: "What was total revenue in fiscal year 2023?"
@@ -63,7 +63,7 @@ Document (PDF / TXT / MD)
         │
         ▼
 ┌───────────────────────────────────────┐
-│       Gemini 1.5 Flash                 │
+│       Gemini 3.1 Flash Lite            │
 │  Finance-tuned system prompt          │
 │  → Answer + source citations          │
 └───────────────────────────────────────┘
@@ -248,7 +248,7 @@ enterprise-rag/
 ├── app/
 │   ├── core/
 │   │   ├── config.py          # Pydantic Settings + lru_cache
-│   │   ├── ingestion.py       # Load → chunk → embed → Qdrant/FAISS
+│   │   ├── ingestion.py       # Load → chunk → embed → Qdrant/FAISS (PDF/TXT/MD/CSV)
 │   │   ├── retrieval.py       # Hybrid search + reranker + Gemini chain
 │   │   ├── vector_store.py    # Provider abstraction (Qdrant / FAISS)
 │   │   ├── security.py        # API key auth + path traversal protection
@@ -260,11 +260,21 @@ enterprise-rag/
 │   │   └── schemas.py         # Pydantic request/response contracts
 │   └── main.py                # FastAPI app + all endpoints
 ├── data/
-│   ├── raw/                   # Input documents
+│   ├── raw/                   # Input documents (financial reports + RIM research corpus)
 │   └── processed/             # FAISS index (auto-generated, gitignored)
 ├── eval/
 │   ├── eval_dataset.json      # 20 financial Q&A pairs
 │   └── run_eval.py            # Scoring harness (keyword recall, answer rate)
+├── scripts/
+│   └── clean_sec_filing.py    # Extracts readable text from raw SEC EDGAR filings
+├── tests/
+├── rim_analysis.py            # RIM research: corpus-frequency tagging (see below)
+├── build_rim_queries.py       # RIM research: generates the query set
+├── rim_experiment.py          # RIM research: runs the reranked/no-rerank comparison
+├── rim_regression.py          # RIM research: continuous corpus_frequency regression
+├── rim_fact_recall.py         # RIM research: paraphrase-robust disclosure metric
+├── RIM_FINDINGS.md            # RIM research: full write-up
+├── HOW_TO_RUN.md              # Step-by-step guide to running the app + RIM research
 ├── .env.example
 ├── docker-compose.yml
 ├── Dockerfile
@@ -307,7 +317,7 @@ chunk boundaries.
 
 | Layer | Technology |
 |-------|------------|
-| LLM | Google Gemini 1.5 Flash |
+| LLM | Google Gemini 3.1 Flash Lite |
 | Embeddings | `models/gemini-embedding-001` (3072-dim) |
 | Vector DB | Qdrant (primary) · FAISS (fallback) |
 | Reranker | `cross-encoder/ms-marco-MiniLM-L-6-v2` |
@@ -316,6 +326,17 @@ chunk boundaries.
 | Observability | LangSmith + structured JSON logs |
 | Auth | API key (`X-API-Key`) + slowapi rate limiting |
 | Containerisation | Docker + Docker Compose |
+
+---
+
+## 🧪 RIM Research: Does RAG Leak Rare Documents More Than Common Ones?
+
+Built on top of this pipeline is a research experiment on **Retrieval-Induced Memorization (RIM)** — whether documents with few similar neighbours in the corpus ("outliers") get reproduced more verbatim by the LLM than common, templated documents, and whether the cross-encoder reranker makes it worse.
+
+The short version: across three independent measurement approaches (exact n-gram overlap, a continuous corpus-frequency regression, and a paraphrase-robust fact-recall metric), **the reranker does not amplify this effect, and in the pipeline's actual production configuration, no significant reproduction gap survives between outlier and common content.** Getting to that answer required catching and fixing two separate measurement artifacts that each initially manufactured a large, statistically significant — but spurious — effect.
+
+- **[RIM_FINDINGS.md](RIM_FINDINGS.md)** — the full write-up: methodology, results, and what transfers to other RAG evaluations
+- **[HOW_TO_RUN.md](HOW_TO_RUN.md)** — step-by-step guide to running the app *and* reproducing this research yourself
 
 ---
 
