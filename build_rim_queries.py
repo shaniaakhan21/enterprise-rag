@@ -136,23 +136,37 @@ BARE_NUMBER_RE = re.compile(r"\b\d{1,3}(?:,\d{3})+(?:\.\d+)?\b")
 
 def extract_distinguishing_figure(page_content):
     """
-    A dollar figure from the chunk's own body (not its header line). The
-    control template names the company, but every same-template company
-    shares identical section headers ("DIVIDENDS", "FINANCIAL HIGHLIGHTS
-    FY2023") -- a query built only from company + header matches the
-    document's opening chunk (which prominently repeats the company name)
-    just as strongly as it matches the actual target section, regardless
-    of topic. Anchoring on a specific figure that appears ONLY in the
-    target chunk gives retrieval a precise, chunk-unique signal instead.
+    A dollar figure from the SAME line/paragraph the topic label itself
+    came from -- not from anywhere in the chunk. The control template
+    names the company, but every same-template company shares identical
+    section headers ("DIVIDENDS", "FINANCIAL HIGHLIGHTS FY2023") -- a
+    query built only from company + header matches the document's
+    opening chunk (which prominently repeats the company name) just as
+    strongly as it matches the actual target section, regardless of
+    topic. Anchoring on a specific figure disambiguates -- but a chunk
+    can contain more than one line item (e.g. "Gross margin ..." followed
+    later, in the same chunk, by "Net income $112,010 ..."), and
+    searching the whole chunk grabs whichever number happens to have a
+    "$" first, which may belong to a completely different line item than
+    the one actually labeled. Restricting the search window to match
+    where derive_control_topics() drew the label from keeps the two
+    consistent.
     """
-    # Headers themselves ("DIVIDENDS", "FINANCIAL HIGHLIGHTS FY2023") never
-    # contain a $ figure, so searching the full chunk (not just body lines
-    # after a header) is safe and also catches continuation chunks where
-    # the figure sits on line 0.
-    m = FIGURE_RE.search(page_content)
+    first_line = page_content.split("\n")[0]
+    if is_header_line(first_line):
+        # Header chunk -- the label is the header; restrict to this
+        # section's own paragraph so a second section later in the same
+        # chunk (e.g. "FINANCIAL HIGHLIGHTS FY2022" tacked onto the end)
+        # can't supply the figure instead.
+        window = page_content.split("\n\n")[0]
+    else:
+        # Continuation chunk -- the label came from this exact line.
+        window = first_line
+
+    m = FIGURE_RE.search(window)
     if m:
         return m.group(0)
-    m = BARE_NUMBER_RE.search(page_content)
+    m = BARE_NUMBER_RE.search(window)
     return f"${m.group(0)}" if m else None
 
 

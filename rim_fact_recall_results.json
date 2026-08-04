@@ -1,0 +1,772 @@
+[
+  {
+    "id": "Q001",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 2
+  },
+  {
+    "id": "Q001",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 2
+  },
+  {
+    "id": "Q002",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.6666666666666666,
+    "n_facts": 3
+  },
+  {
+    "id": "Q002",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.6666666666666666,
+    "n_facts": 3
+  },
+  {
+    "id": "Q003",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.75,
+    "n_facts": 4
+  },
+  {
+    "id": "Q003",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.75,
+    "n_facts": 4
+  },
+  {
+    "id": "Q004",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.0,
+    "n_facts": 2
+  },
+  {
+    "id": "Q004",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 2
+  },
+  {
+    "id": "Q005",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q005",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q006",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q006",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q007",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 2
+  },
+  {
+    "id": "Q007",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 2
+  },
+  {
+    "id": "Q008",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q008",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.3333333333333333,
+    "n_facts": 3
+  },
+  {
+    "id": "Q009",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q009",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q010",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.75,
+    "n_facts": 4
+  },
+  {
+    "id": "Q010",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.75,
+    "n_facts": 4
+  },
+  {
+    "id": "Q011",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q011",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q012",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.75,
+    "n_facts": 4
+  },
+  {
+    "id": "Q012",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q013",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q013",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q014",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.8333333333333334,
+    "n_facts": 6
+  },
+  {
+    "id": "Q014",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.8333333333333334,
+    "n_facts": 6
+  },
+  {
+    "id": "Q015",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q015",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q016",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q016",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q017",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.75,
+    "n_facts": 4
+  },
+  {
+    "id": "Q017",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.75,
+    "n_facts": 4
+  },
+  {
+    "id": "Q018",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.5,
+    "n_facts": 2
+  },
+  {
+    "id": "Q018",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 2
+  },
+  {
+    "id": "Q019",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 2
+  },
+  {
+    "id": "Q019",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 2
+  },
+  {
+    "id": "Q020",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q020",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q021",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.75,
+    "n_facts": 4
+  },
+  {
+    "id": "Q021",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q022",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.75,
+    "n_facts": 4
+  },
+  {
+    "id": "Q022",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.75,
+    "n_facts": 4
+  },
+  {
+    "id": "Q023",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q023",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q024",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 0.5,
+    "n_facts": 4
+  },
+  {
+    "id": "Q024",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 0.5,
+    "n_facts": 4
+  },
+  {
+    "id": "Q025",
+    "category": "outlier",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q025",
+    "category": "outlier",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q026",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.3333333333333333,
+    "n_facts": 3
+  },
+  {
+    "id": "Q026",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.3333333333333333,
+    "n_facts": 3
+  },
+  {
+    "id": "Q028",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q028",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q029",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q029",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q030",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q030",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q031",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q031",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q032",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q032",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q033",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q033",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q034",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q034",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q035",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.3333333333333333,
+    "n_facts": 3
+  },
+  {
+    "id": "Q035",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.3333333333333333,
+    "n_facts": 3
+  },
+  {
+    "id": "Q037",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q037",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q038",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q038",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q039",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q039",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q040",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q040",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q041",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q041",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q042",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.3333333333333333,
+    "n_facts": 3
+  },
+  {
+    "id": "Q042",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q043",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q043",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q044",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q044",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q046",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.6666666666666666,
+    "n_facts": 3
+  },
+  {
+    "id": "Q046",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q047",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q047",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q048",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q048",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q049",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q049",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.6666666666666666,
+    "n_facts": 3
+  },
+  {
+    "id": "Q050",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q050",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q051",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q051",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q052",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q052",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.6666666666666666,
+    "n_facts": 3
+  },
+  {
+    "id": "Q055",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.5,
+    "n_facts": 4
+  },
+  {
+    "id": "Q055",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.5,
+    "n_facts": 4
+  },
+  {
+    "id": "Q045",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q045",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q053",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.3333333333333333,
+    "n_facts": 3
+  },
+  {
+    "id": "Q053",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.3333333333333333,
+    "n_facts": 3
+  },
+  {
+    "id": "Q054",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 0.5,
+    "n_facts": 4
+  },
+  {
+    "id": "Q054",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.5,
+    "n_facts": 4
+  },
+  {
+    "id": "Q027",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 4
+  },
+  {
+    "id": "Q027",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 0.25,
+    "n_facts": 4
+  },
+  {
+    "id": "Q036",
+    "category": "control",
+    "variant": "reranked",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  },
+  {
+    "id": "Q036",
+    "category": "control",
+    "variant": "no_rerank",
+    "fact_recall": 1.0,
+    "n_facts": 3
+  }
+]

@@ -139,6 +139,7 @@ for variant in ('reranked', 'no_rerank'):
 | `Connection refused` talking to Qdrant | Docker Desktop isn't running, or the container is stopped. Redo Part 2, Steps 1-2 |
 | `429 quota exceeded` errors | You've hit Gemini's free-tier limit. Wait a bit (rate limits) or wait until the next day (daily quota) and re-run — scripts resume automatically |
 | Ingest says "chunks_indexed": huge number | Check the file you pointed at isn't a giant raw/unprocessed file — clean/trim it first (see `scripts/clean_sec_filing.py` for an example) |
+| A document's chunk count doubled after re-running an `/ingest` example | `/ingest` doesn't check for existing chunks — running it twice on the same file duplicates every chunk. Find and remove the duplicates: scroll the collection, group by `(source_file, chunk_index)`, delete extras keeping one per group. This happened once during this project's own testing (re-running the Part 3 ingest example against `acme_annual_report_2023.txt`) and is why 2 point IDs referenced in `rim_queries.json` no longer resolve — the underlying text survived under a different point ID, so it didn't affect any already-computed result, but a `--restart` of `rim_experiment.py` from scratch would hit a missing-ID error on those 2 queries. If that happens, just rebuild `rim_queries.json` (`python3 build_rim_queries.py`) to get fresh valid IDs. |
 
 ---
 
